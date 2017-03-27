@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+
+/* 头部菜单栏*/
+#menubar{
+	display: none;
+	position: fixed;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	height:80px;
+	background: #fff;
+	-webkit-box-shadow: #838282 0px 0px 10px;
+	box-shadow: #838282 0px 0px 10px;
+}
+.logo{
+	display: block;
+	background: url(../img/logo.png);
+	height:30px;
+	background-repeat: no-repeat;
+	margin-top: 25px;
+	margin-left: 40px;
+	text-indent: -9999px;
+}
+#menubar ul{
+	float: right;
+	position: absolute;
+	right:40px;
+	top: 30px;
+}
+#menubar ul li{
+	display: inline;
+	margin-left: 17px;
+}
+#menubar ul li a{
+	color:#838282;
+	font-family: Myriad Pro;
+}
+#menubar ul .active a{
+	color:#6093e7;
+	font-weight: bold;
+}
+
+#header_img{
+	width: 100%;
+	height: 5000px;
+	background: blueviolet;
+}
