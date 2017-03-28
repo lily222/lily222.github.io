@@ -20,6 +20,7 @@ a{
 	box-shadow: #838282 0px 0px 10px;
 }
 .logo{
+	/*visibility:hidden;*/
 	display: block;
 	background: url(../img/logo.png);
 	height:30px;
