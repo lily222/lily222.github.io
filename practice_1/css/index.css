@@ -76,7 +76,11 @@ a{
 	opacity: 0.5;
 	background:#fff;
 	color:dodgerblue;
-	animation: text_change 3s;
+	animation: text_change 2s infinite;
+	-moz-animation: text_change 2s infinite;
+	-webkit-animation: text_change 2s infinite;
+	-ms-animation: text_change 2s infinite;
+	ani
 	
 }
 @keyframes text_change{
