@@ -80,8 +80,6 @@ a{
 	-moz-animation: text_change 2s infinite;
 	-webkit-animation: text_change 2s infinite;
 	-ms-animation: text_change 2s infinite;
-	ani
-	
 }
 @keyframes text_change{
 	0%{opacity: 0;}
