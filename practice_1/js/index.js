@@ -18,9 +18,22 @@ $(document).ready(function(){
 		}
 	})   
 	
+	//字体的变换
+	var i=0;
+	var text_arry=new Array("developers","rockstars","designers");
+	function text_change(){
+		$(".text_change").text(text_arry[i]);
+		i++;
+		if(i>=3){
+			i=0;
+		}
+	}
+	var text_chang=setInterval(text_change,2000);
+	
 })
 
-/*
+/*js的代码
+ * 菜单栏的显示
 window.onload=function () {
 	window.onscroll = function(){ 
     var t = document.documentElement.scrollTop || document.body.scrollTop;  
