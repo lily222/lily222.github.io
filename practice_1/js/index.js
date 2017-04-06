@@ -7,12 +7,12 @@
 $(document).ready(function(){
 	
 	
-	//菜单栏的显示
+	//菜单栏的显示       //改进:菜单栏应是向下划出而不是消失
 	$(window.document).scroll(function(){
 		var window_top = $(document).scrollTop();
 		
 		if(window_top>5){
-			$("#menubar").show();
+			$("#menubar").show();   
 		}else{
 			$("#menubar").hide();
 		}
