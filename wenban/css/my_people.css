@@ -1,0 +1,544 @@
+.middle{
+	width: 92%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+/*左侧部分*/
+#middle_left{
+	min-height: 300px;
+}
+#middle_left .message{
+	margin-top: 50px;
+	width: 100%;
+	background: rgba(173,255,47,.25);
+	height: 50px;
+	overflow: hidden;
+}
+#middle_left .message img{
+	width: 50px;
+	height: 50px;
+	float: left;
+	background: #EDF4ED;
+}
+#middle_left .message h3{
+	float: left;
+	margin: 0 0 0 10px;
+	line-height: 50px;
+	font-weight: bold;
+}
+#middle_left .message a{
+	display: block;
+	float: right;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+#middle_left .message i{
+	font-size: 30px;
+	display: block;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #999;
+}
+#middle_left .message i:hover{
+	color: #333;
+}
+/*我的收藏*/
+#collect,#book_list,#comment,#message_board{
+	width: 100%;
+	margin-top: 40px;
+}
+#collect h3,#book_list h3,#comment h3,#message_board h3{
+	display: inline-block;
+	margin: 0;
+	color: #228A31;
+	height: 25px;
+}
+#collect .more,#book_list .more,#comment .more,#message_board .more{
+	display: inline-block;
+	position: relative;
+	top: -3px;
+	height: 25px;
+	line-height: 25px;
+	width: 60px;
+	font-size: 15px;
+}
+#collect .more a,#book_list .more a,#comment .more a,#message_board .more a{
+	text-decoration: none;
+}
+#collect .more a:hover,#book_list .more a:hover,#comment .more a:hover,#message_board .more a:hover{
+	color: #FFF;
+	background: #23527c;
+}
+.collect_right{
+	display: none;
+	height: 420px;
+}
+#collect .collect_content{
+	width: 100%;
+	background:rgba(0,0,0,.05);
+	margin-top: 20px;
+	position: relative;
+	height: 420px;
+	overflow: hidden;
+}
+#collect .collect_content ul{
+	background: #fff;
+	padding-top: 5px;
+	width: 40px;
+	text-align: center;
+	box-shadow:0 1px 5px rgba(0,0,0,.5);
+	z-index: 2;
+}
+#collect .collect_content ul .collect_button{
+	padding: 5px 0;
+	width: 40px;
+	display: block;
+	font-size: 15px;
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background: rgba(0,0,0,.05);
+}
+#collect .collect_content ul a.active{
+	background: #fff;
+	box-shadow:1px 0px 1px rgba(0,0,0,.5) inset;
+	border-right: none;
+}
+#collect .collect_right.active{
+	display: block;
+	position: absolute;
+	left: 40px;
+	top: 0;
+	right: 0;
+	background: #fff;
+}
+#collect ol{
+	list-style: none;
+	/*width: 93%;*/
+	text-align: left;
+	padding: 5px 15px;
+}
+#collect .book_list .collect_right img{/*书单*/
+	width: 90px;
+	height: 90px;
+	float: left;
+	margin-right: 10px;
+}
+#collect .book_list .collect_right li{
+	height: 90px;
+	font-size: 19px;
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+#collect .book_list .collect_right li a{
+	color: #333;
+}
+#collect .book_list .collect_right li a:hover{
+	color: greenyellow;
+}
+#collect .book_list .collect_right li p{
+	font-size: 15px;
+	margin-top: 10px;
+	color: #999;
+}
+#collect .novel li{  /*小说*/
+	height: 126px;
+	margin-bottom: 15px;
+	position: relative;
+}
+#collect .novel li:last-child{
+	margin-bottom: 0px;
+}
+#collect .novel img{
+	width: 90px;
+	height: 126px;
+	float: left;
+	margin-right: 10px;
+}
+#collect .novel li h4,#collect .comment li h4{
+	padding-top: 5px;
+	font-size: 19px;
+	color: #333;
+	display: inline-block
+}
+#collect .novel li h4:hover,#collect .comment li h4:hover{
+	color: greenyellow;
+	text-decoration: underline;
+}
+#collect .novel li a.author:hover,#collect .comment li p a:hover{
+	text-decoration: none;
+	background: #23527c;
+	color: #fff;
+}
+#collect .novel li span{
+	color: orange;
+}
+#collect .novel li p{
+	text-indent: 2em;
+	overflow: hidden;
+	text-align: justify;
+	text-overflow: ellipsis;
+	color: #666;
+	position: absolute;
+	left: 100px;
+	right: 0px;
+	top: 69px;
+	bottom: -10px;
+}
+#collect .comment li{/*书评*/
+	height: 126px;
+	margin-bottom: 10px;
+}
+#collect .comment img{
+	width: 90px;
+	height: 126px;
+	float: left;
+	margin-right: 10px;
+}
+#collect .comment p{
+	display: inline-block;
+}
+
+#collect .collect_right .star_black{
+	display: inline-block;
+	height: 13px;
+	width: 70px;
+	background: url(../img/score_star.png) 0px -140px no-repeat;
+	background-size: 70px;
+	position: relative;
+	top: 0px;
+	margin-left: 5px;
+}
+#collect .collect_right .star_yellow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 79%;
+	height: 13px;
+	background: url(../img/score_star.png) 0 0 no-repeat;
+	background-size: 70px;
+}
+#collect .collect_right .right{
+	position: relative;
+	height: 126px;
+	width: 100%;
+}
+#collect .collect_right .text{
+	position: absolute;
+	top: 70px;
+	left: 100px;
+	right: 0px;
+	bottom: -10px;
+	text-align: justify;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-indent: 2em;
+	line-height: 20px;
+	color: #666;
+}
+@media only screen and (max-width: 489px) {
+	#collect .collect_right .text{
+		display: none;
+	}
+}
+@media only screen and (max-width: 403px) {
+	#collect .comment p{
+		position: absolute;
+		top: 40px;
+		left: 100px;
+	}
+	#collect .comment .collect_right .star_black{
+		margin-left: 0px;
+		top: 40px;
+	}
+	#collect .novel .collect_right .star_black{
+		display: none;
+	}
+}
+/*我的书单*/
+#book_list .title > a,#comment .title > a{
+	float: right;
+	display: block;
+	background: #fff;
+	font-size: 15px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 5px;
+	margin-bottom: 10px;
+}
+#book_list .title > a:hover,#comment .title > a:hover{
+	color: #fff;
+	text-decoration: none;
+	background: #23527c;
+}
+#book_list ul{
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+	justify-content: space-between;
+}
+#book_list ul li{
+	width: 30%;
+	background: #fff;
+	text-align: center;
+}
+#book_list ul li a{
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+#book_list ul li a img{
+	width: 100%;
+}
+#book_list ul li h4{
+	font-size: 16px;
+}
+#book_list ul li p{
+	width: 100%;
+	text-align: center;
+}
+/*我的书评*/
+#comment ul{
+	width: 100%;
+	margin-top: 15px;
+	background: #fff;
+}
+#comment ul li{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#comment ul li:last-child{
+	margin-bottom: 0;
+}
+#comment ul img{
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+#comment ul .right{
+	position: relative;
+	height: 140px;
+	width: 100%;
+}
+#comment ul .right > a{
+	color: #333333;
+}
+#comment ul .right > a:hover{
+	color: greenyellow;
+}
+#comment ul .right h4{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+#comment ul .right p{
+	display: inline-block;
+}
+#comment ul .right p a:hover{
+	background: #23527c;
+	color: #fff;
+	text-decoration: none;
+}
+#comment ul .right .text{
+	position: absolute;
+	bottom: 10px;
+	top: 56px;
+	left: 110px;
+	right: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	text-indent: 2em;
+	color: #666;
+}
+#comment ul .right label{
+	font-weight: normal;
+	float: right;
+	color: #666;
+}
+@media only screen and (max-width:473px ) {
+	#comment ul .right label{
+		margin-top: 85px;
+	}
+}
+@media only screen and (max-width:468px ) {
+	#comment ul .right label{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+#comment ul .right .star_black{
+	display: inline-block;
+	height: 13px;
+	width: 70px;
+	background: red;
+	background: url(../img/score_star.png) 0px -140px no-repeat;
+	background-size: 70px;
+	position: relative;
+	top: 0px;
+	margin-left: 5px;
+}
+#comment ul .right .star_black .star_yellow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 13px;
+	background: url(../img/score_star.png) 0 0 no-repeat;
+	background-size: 70px;
+}
+/*留言板*/
+#message_board .leave_message{
+	width: 100%;
+	margin: 20px 0px;
+}
+#message_board .leave_message textarea{
+	width: 100%;
+	height: 80px;
+	font-size: 14px;
+	border: 1px solid #666;
+}
+#message_board .leave_message button{
+	padding: 1px 5px;
+	font-size: 16px;
+}
+/*留言的内容*/
+#message_board .content{
+	width: 100%;
+	background: #fff;
+	margin-top: 40px;
+}
+#message_board .content img{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 10px;
+}
+#message_board .each_message{
+	position: relative;
+	min-height: 60px;
+	margin-bottom: 10px;
+}
+#message_board .each_message:last-child{
+	margin-bottom: 0;
+}
+#message_board .each_message .react{
+	text-decoration: none;
+	color: darkgreen;
+	position: absolute;
+	top: 42px;
+	left: 5px;
+}
+#message_board .each_message .react:hover{
+	color: #fff;
+	background: darkgreen;
+}
+#message_board .each_message .top_right a:hover{
+	text-decoration: none;
+	background: #23527c;
+	color: #fff;
+}
+#message_board .each_message .top_right label{
+	font-weight: normal;
+	margin-left: 5px;
+}
+#message_board .each_message p{
+	padding-left: 50px;
+	text-align: justify;
+}
+
+/*右侧部分*/
+#middle_right{
+	padding-top: 50px;
+}
+#middle_right .personal_message{
+	width: 100%;
+	background: #FFF6ED;
+	padding: 10px;
+}
+#middle_right .personal_message img{
+	width: 160px;
+	height: 160px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+#middle_right .personal_message_top{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+#middle_right .personal_message_top p{
+	display: inline-block;
+}
+/*自我介绍*/
+#middle_right .introduction a:hover{
+	text-decoration: none;
+	background: #37a;
+	color: #fff;
+}
+#middle_right .introduction p:nth-child(2),#middle_right .introduction .edite_introduction{
+	display: none;
+}
+#middle_right .introduction .edite_introduction textarea{
+	width: 100%;
+	height: 80px;
+}
+#middle_right .introduction .edite_introduction button{
+	padding: 1px 5px;
+	margin-right: 5px;
+}
+/*关注*/
+#middle_right .fans{
+	margin: 20px 0px;
+	color: #666699;
+	display: inline-block;
+	font-size: 17px;
+	height: 20px;
+	line-height: 20px;
+}
+#middle_right .fans:hover{
+	color: #fff;
+	background: #666699;
+	text-decoration: none;
+}
+#middle_right .fans i{
+	position: relative;
+	top: 2px;
+}
+#middle_right .my_follow_name{
+	font-size: 22px;
+	color: #228A31;
+}
+#middle_right .my_follow_name span{
+	font-size: 15px;
+	position: relative;
+	top: -3px;
+}
+#middle_right .my_follow_name a:hover{
+	background: #37a;
+	color: #fff;
+	text-decoration: none;
+}
+#middle_right .my_follow{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#middle_right .my_follow li{
+	width: 30%;
+	text-align: center;
+	max-width: 120px;
+}
+#middle_right .my_follow li a{
+	display: block;
+	width: 100%;
+}
+#middle_right .my_follow li img{
+	width: 100%;
+}

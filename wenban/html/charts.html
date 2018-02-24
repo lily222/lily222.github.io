@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="img/wen_icon.png" />
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<title>小说排行榜</title>
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/head.css" />
+		<link rel="stylesheet" href="../css/charts.css" />
+	</head>
+	<body>
+		<header></header>
+		<!--固定导航-->
+		<div id="fixed_nav">
+			<div class="fixed_nav_left">
+				<a href="../index.html">
+					<img class="icon" src="../img/wen_icon.png" />
+					<span>文瓣</span>
+				</a>
+				<span class="page_title">小说排行榜</span>
+			</div>
+			<div class="fixed_nav_right">
+				<div class="bg_music start_music">
+					<audio src="../media/天門 - 想い出は逺くの日々.mp3" autoplay="autoplay" loop="loop"></audio>
+					<img class="music_shows_status" src="../img/charts/music.gif"/>
+					<p>天門 - 想い出は逺くの日々</p>
+				</div>
+				<div class="page_nav">
+					<i class="glyphicon glyphicon-th-list"></i>
+					<span>目录</span>
+					<dl class="scroll_nav">
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p1">高分小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p2">最受关注小说</a></dd>
+						<dt><i class="glyphicon glyphicon-menu-right"></i>性向分类</dt>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p3">言情类小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p4">纯爱类小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p5">无CP类小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p6">百合类小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p7">女尊类小说</a></dd>
+						<dt><i class="glyphicon glyphicon-menu-right"></i>时代分类</dt>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p8">近代现代类小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p9">古色古香类小说</a></dd>
+						<dd><i class="glyphicon glyphicon-menu-right"></i><a href="#p10">幻想未来类小说</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!--固定按钮下一页-->
+		<div id="next_page_btn"><i class="glyphicon glyphicon-menu-down"></i></div>
+		<!--视频-->
+		<div id="mp4">
+			<video src="../media/book_annual.mp4" loop="loop" autoplay="autoplay"></video>
+			<img src="../img/charts/charts_bg_1.jpg" />
+			<img class="video_text" src="../img/charts/charts_title.png" />
+		</div>
+		
+		<!--高分小说-->
+		<a class="each_page"  name="p1" id="p1">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">高分小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--最受关注小说-->
+		<a class="each_page"  name="p2" id="p2">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">最受关注小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		
+		<!--言情类小说-->
+		<a class="each_page"  name="p3" id="p3">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">言情类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--纯爱类小说-->
+		<a class="each_page"  name="p4" id="p4">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">纯爱类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--无cp类小说-->
+		<a class="each_page"  name="p5" id="p5">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">无cp类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--百合类小说-->
+		<a class="each_page"  name="p6" id="p6">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">百合类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--女尊类小说-->
+		<a class="each_page"  name="p7" id="p7">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">女尊类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--近代现代类小说-->
+		<a class="each_page"  name="p8" id="p8">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">近代现代类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--古色古香类小说-->
+		<a class="each_page"  name="p9" id="p9">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">古色古香类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--幻想未来类小说-->
+		<a class="each_page"  name="p10" id="p10">
+			<div class="each_page_content">
+				<!--第一名小说-->
+				<div class="first_novel">
+					<img alt="第一名" src="../img/can_delete/hot_book_list_pic.jpg">
+					<div class="first_novel_right">
+						<p class="each_page_title">幻想未来类小说排行榜</p>
+						<span class="order_number">Top 1</span>
+						<h4>魔道祖师</h4>
+						<p class="author">作者名</p>
+						<div class="star">
+							<div class="star_black"></div>
+							<div class="star_yellow"></div>
+						</div>
+						<span class="score">9.1</span>
+						<span class="assess_people">255&nbsp;人评价</span>
+						<p class="short_comment">点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评点赞最多的短评</p>
+					</div>
+				</div>
+				<!--2到10名小说-->
+				<div class="other_novel">
+					<div class="inner_other_novel">
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">2</span>
+							<p>你有药吗你有药吗你有药吗你<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">3</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">4</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">5</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">6</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">7</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">8</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">9</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+						<div class="other_each_novel">
+							<img alt="小说封面" src="../img/can_delete/fengmian.jpg">
+							<span class="order_number">10</span>
+							<p>你有药吗<span>&nbsp;8.0</span></p>
+						</div>
+					</div>
+				</div><!--第二到第十名小说结束s-->
+			</div>
+		</a>
+		<!--结束页-->
+		<a class="each_page" id="p11" name="p11">
+			<h1>FIN</h1>
+			<p class="fin_text">榜单是为了支持自己喜欢的小说，也为让更多人知道它。</br>在茫茫书海中寻找一本高质量的小说，在茫茫人海中遇见与自己口味相符的书友。</br>未来相伴，让好书遇见你。</p>
+		</a>
+		
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.mousewheel.min.js" ></script>
+		<script type="text/javascript" src="../js/charts.js" ></script>
+		<script type="text/javascript" src="../js/head.js" ></script>
+	</body>
+</html>

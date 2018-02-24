@@ -1,0 +1,63 @@
+form{
+	width: 80%;
+	margin: 50px 0 0 10%;
+}
+form #name{
+	padding-left: 5px;
+	border: 1px solid #228A31;
+	outline: none;
+	width: 200px;
+	height: 25px;
+}
+form label{
+	color: #228A31;
+	font-size: 15px;
+	letter-spacing: 2px;
+	width: 85px;
+	text-align: right;
+}
+form fieldset{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+form fieldset:last-child{
+	text-align: center;
+}
+form #head_sculpture{
+	margin-left: 90px;
+	margin-top: -20px;
+}
+form #head_sculpture img{
+	width: 200px;
+	height: 200px;
+}
+form #head_sculpture span{
+	display: block;
+	margin: 5px 0px;
+}
+form #head_sculpture input{
+	font-size: 13px;
+	height: 25px;
+	color: #000;
+	outline: none;
+}
+form #head_sculpture input:last-child{
+	width: 68px;
+	margin-top: 5px;
+}
+form fieldset:last-child input{
+	width: 70px;
+	height: 25px;
+	background: #228A31;
+	color: #fff;
+	border: none;
+	margin: 0 auto;
+}
+
+footer{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}

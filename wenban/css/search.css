@@ -1,0 +1,314 @@
+#middle{
+	width: 92%;
+	margin: 0 4%;
+	overflow: hidden;
+}
+/*左侧部分*/
+#middle_left{
+	overflow: hidden;
+	padding-left: 0;
+}
+#middle_left .search_box{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #DCDCDC;
+	background: #fff;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	margin-left: 3px;
+	box-shadow: 0 0 0px 3px #F7F7F8;
+	position: relative;
+}
+#middle_left .search_box button{
+	height: 28px;
+	width: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 15px;
+	border: none;
+	background: #fff;
+	float: right;
+	margin-top: -1px;
+	color: #919191;
+}
+#middle_left .search_box button:focus{
+	outline: none;
+}
+#middle_left .search_box input{
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	padding-right: 30px;
+	padding-left: 5px;
+	outline: none;
+	border: none;
+}
+/*搜索内容导航*/
+#middle_left .search_nav{
+	float: left;
+	font-size: 13px;
+}
+#middle_left .search_nav li{
+	height: 20px;
+	line-height: 20px;
+	width: 50px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+#middle_left .search_nav li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 3px;
+	background: #fff;
+	text-decoration: none;
+	color: #333;
+}
+#middle_left .search_nav li a:hover{
+	color: #fff;
+	background: #8cd379;
+}
+#middle_left .search_nav li.active a{
+	color: #fff;
+	background: #7fc06e;
+}
+#middle_left .search_nav li.active a:hover{
+	background: #7fc06e;
+}
+#middle_left .search_nav.fixed_search_nav{
+	position: fixed;
+	top: 0px;
+	left: 4%;
+}
+/*搜索内容*/
+#middle_left .search_content{
+	width: 100%;
+	padding-left: 70px;
+	background: #fff;
+}
+#middle_left .search_content h3{
+	color: #228A31;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+#middle_left .each_content{
+	display: none;
+	overflow: hidden;
+}
+#middle_left .each_content img{
+	float: right;
+}
+#middle_left .each_content a{
+	color: #37a;
+	text-decoration: none;
+}
+#middle_left .each_content h4{
+	font-size: 16px;
+	white-space: nowrap;
+	display: inline-block;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+#middle_left .each_content h4:hover{
+	color: #fff;
+	background: #3377AA;
+}
+#middle_left .each_content.novel{
+	display: block;
+}
+#middle_left .novel{ /*小说*/
+}
+#middle_left .each_content img{
+	width: 55px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #ccc;
+}
+#middle_left .novel .each_novel,#middle_left .user .each_user
+,#middle_left .editor .each_editor,#middle_left .each_content .each_comment
+,#middle_left .each_content .each_book_list{
+	border-bottom: 2px dotted #999;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+#middle_left .novel .each_novel .left,#middle_left .user .each_user .left
+,#middle_left .editor .each_editor .left,#middle_left .each_content .each_comment .left
+,#middle_left .each_content .each_book_list .left{
+	width: 100%;
+	padding-right: 65px;
+	float: left;
+	font-size: 13px;
+}
+#middle_left .novel .star_black{
+	display: inline-block;
+	width: 70px;
+	height: 13px;
+	background: url(../img/score_star.png) 0px -140px no-repeat;
+	background-size: 70px;
+}
+#middle_left .novel .star_black .star_yellow{
+	width: 81%;
+	height: 13px;
+	background: url(../img/score_star.png) 0 0 no-repeat;
+	background-size: 70px;
+}
+#middle_left .novel .score{
+	color: #FFAC2D;
+}
+#middle_left .novel .comment_num{
+	font-style: normal;
+}
+#middle_left .novel .year{
+	margin-left: 5px;
+}
+#middle_left .novel p,#middle_left .each_content p{
+	color: #999;
+	margin-top: 5px;
+	text-align: justify;
+	max-height: 54px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#middle_left .user{/*用户*/
+	width: 100%;
+}
+#middle_left .user .each_user{
+	min-height: 65px;
+}
+#middle_left .user .left{
+	font-size: 13px;
+}
+#middle_left .user .fans_num{
+	font-style: normal;
+}
+#middle_left .editor .each_editor{/*作者*/
+	min-height: 65px;
+}
+#middle_left .editor .each_editor{
+	padding-bottom: 5px;
+}
+#middle_left .editor .fans{
+	margin-bottom: 5px;
+	display: inline-block;
+}
+#middle_left .editor .fans_num{
+	font-style: normal;
+}
+#middle_left .comment .each_comment{/*书评*/
+	min-height: 87px;
+}
+#middle_left .comment .left p{
+	color: #333;
+}
+#middle_left .comment .left p:last-child{
+	color: #999;
+}
+#middle_left .book_list .each_book_list{/*书单*/
+	min-height: 87px;
+}
+#middle_left .book_list span{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+/*显示更多*/
+#middle_left #show_more{
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	outline: none;
+	background: rgba(0,0,0,.05);
+	border: none;
+	letter-spacing: 2px;
+}
+#middle_left #show_more:hover{
+	background: rgba(0,0,0,.1);
+}
+/*右侧部分*/
+#middle_right{
+}
+#middle_right .advert{
+	margin-top: 50px;
+	width: 100%;
+	display: block;
+	position: relative;
+	/*max-width: 300px;*/
+}
+#middle_right .advert img{
+	width: 100%;
+}
+#middle_right .advert i{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	display: block;
+	background: rgba(0,0,0,.4);
+	color: #fff;
+	width: 45px;
+	height: 20px;
+	text-align: center;
+	border-radius: 20px 0px 0px 0px;
+}
+#middle_right h3{
+	font-size: 19px;
+	color: #228A31;
+}
+#middle_right .add_novel a{
+	display: inline-block;
+	color: #37a;
+	text-decoration: none;
+	font-size: 14px;
+	padding-right: 5px;
+}
+#middle_right .add_novel a:hover{
+	background: #3377AA;
+	color: #fff;
+}
+#middle_right .add_novel a i{
+	display: inline-block;
+	position: relative;
+	top: 1px;
+	margin-right: 5px;
+	font-size: 10px;
+}
+/*回到顶部*/
+#to_top{
+	width: 80px;
+	height: 25px;
+	background: #fff;
+	position: fixed;
+	bottom: 20px;
+	right: 25%;
+	display: none;
+	cursor: pointer;
+}
+#to_top i{
+	margin-right: 3px;
+}
+#location{
+	height: 0px;
+	position: fixed;
+	bottom: 20px;
+}
+#to_top.down{
+	position: relative;
+	right: -66%;
+	top: -30px;
+}
+@media only screen and (max-width: 767px) {
+	#to_top{
+		left: 4%;
+	}
+	#middle_right{
+		display: none;
+	}
+}

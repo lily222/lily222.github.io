@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<link rel="shortcut icon" href="../img/wen_icon.png" />
+		<title>文瓣登录</title>
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/head.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+	</head>
+	<body>
+		<header></header>
+		<div id="main">
+			<img src="../img/logo.png" />
+			<form id="login_form" method="post" action="">
+				<fieldset>
+					<p>
+				        <label for="user">账号：</label>
+				        <input type="text" id="user" name="user" placeholder="请输入电话号码"/>
+				    </p>
+					<p>
+						<label for="password">密码：</label>
+						<input type="password" name="password" placeholder="密码" id="password" />
+						<a href="#" class="forget">忘记密码</a>
+					</p>
+					<p style="display: none;" class="error">账号或者密码错误！</p>
+					<p>
+						<input id="submit" type="submit" value="登 录" />
+					</p>
+				</fieldset>
+			</form>
+			<!--社交账号登录-->
+			<div id="other_login">
+				<ul>
+					<li class="wechat"><a href="#"><span></span>微信</a></li>
+					<li class="QQ"><a href="#"><span></span>QQ</a></li>
+				</ul>
+			</div>
+			<a href="register.html" class="go_register">还未有账号，去注册</a>
+		</div>
+		<footer>&copy; 广东海洋大学</footer>
+		
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.validate-1.13.1.js" ></script>
+		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript" src="../js/head.js" ></script>
+	</body>
+</html>

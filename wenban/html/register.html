@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<link rel="shortcut icon" href="../img/wen_icon.png" />
+		<title>文瓣注册</title>
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/head.css" />
+		<link rel="stylesheet" href="../css/register.css" />
+	</head>
+	<body>
+		<header></header>
+		<div id="main">
+			<img src="../img/logo.png" />
+			<form id="register_form" method="post" action="">
+				<fieldset>
+					<p>
+						<label for="user">手机号码</label>
+						<input id="user" name="user" type="text" placeholder="请输入手机号" />
+						
+					</p>
+					<p>
+						<label for="password">密码</label>
+						<input type="password" id="password" name="password" placeholder="请输入4-15英文字母、数字" />
+						
+					</p>
+					<p>
+						<label for="password2">确认密码</label>
+						<input type="password" id="password2" name="password2" placeholder="请再次输入密码" />
+					</p>
+					<p>
+						<label for="identifying_code">验证码</label>
+						<input type="text" id="identifying_code" name="identifying_code" placeholder="请输入验证码"/>
+						<img class="identifying_code_img" alt="验证码">
+						<a href="#" class="change_code">看不清</a>
+					</p>
+					<p>
+						<label for="check_code">校验码</label>
+						<input type="text" id="check_code" name="check_code" placeholder="请输入手机校验码" />
+						<button class="check_code_btn" type="button">获取校验码</button>
+					</p>
+					<p>注册即表示同意《<a href="#">用户注册条款</a>》</p>
+					<p>
+						<button class="submit_btn" type="submit">注 册</button>
+					</p>
+				</fieldset>
+			</form>
+			<a href="login.html" class="go_login">已有账号或使用其他社交账号登录</a>
+		</div>
+		<footer>&copy; 广东海洋大学</footer>
+		
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.validate-1.13.1.js" ></script>
+		<script type="text/javascript" src="../js/register.js"></script>
+		<script type="text/javascript" src="../js/head.js" ></script>
+	</body>
+</html>

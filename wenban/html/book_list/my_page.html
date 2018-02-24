@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="../../img/wen_icon.png" />
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title>我的书单的标题xxx</title>
+		<link rel="stylesheet" href="../../dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/head.css" />
+		<link rel="stylesheet" href="../../css/book_list_page.css" />
+	</head>
+	<body>
+		<header></header>
+		<div class="middle">
+			<!--左边主体部分-->
+			<div id="page_main" class="col-xs-12 col-sm-8">
+				<!--书单相关信息-->
+				<img class="book_list_cover" alt="书单封面" src="../../img/can_delete/webwxgeticon.jpg" />
+				<div class="change_cover">更换</br>图片</div>
+				<h3 class="book_list_name"><span>高质量古代言情小说啊</span><i title="修改标题" class="glyphicon glyphicon-pencil change_book_list_name"></i></h3>
+				<div style="clear: both;"></div>
+				<a href="#" class="editor_name">uncle_red_红叔</a>
+				<span>2018-01-12 15:33:47</span>
+				<p class="tab">标签：<span><i>强强、古代、bg、武侠、修真、朝廷、同人、言情、纯爱、无CP</i><input type="button" class="change_tab" value="修改标签" data-target="#tab_modal" data-toggle="modal" /></span></p>
+				<!--修改标签弹出框-->
+				<div id="tab_modal" class="modal fade" tabindex="-1" role="dialog">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">修改标签</h4>
+				      </div>
+				      <div class="modal-body"><!--弹出框主体部分-->
+				        <div class="old_tab">
+				        	<span>标签：</span>
+				        	<ul>
+				        		<li>拉拉</li>
+				        		<li>拉拉</li>
+				        		<li>拉拉</li>
+				        		<li>拉拉啦啦啦</li>
+				        		<li>拉拉</li>
+				        	</ul>
+				        </div>
+				        <div class="add_tab">
+				        	<span>添加新标签：</span>
+				        	<ul>
+				        		<li>直播</li>
+				        		<li>网红</li>
+				        		<li>强强</li>
+				        		<li>穿越</li>
+				        		<li>快穿aaa</li>
+				        		<li>同人</li>
+				        		<li>星际</li>
+				        		<li>洪荒</li>
+				        		<li>修真</li>
+				        		<li>快穿aaa</li>
+				        		<li>同人</li>
+				        		<li>星际</li>
+				        		<li>洪荒</li>
+				        		<li>修真</li><li>快穿aaa</li>
+				        		<li>同人</li>
+				        		<li>星际</li>
+				        		<li>洪荒</li>
+				        		<li>修真</li>
+				        	</ul>
+				        	<div class="write">
+				        		<input type="text" class="new_tab" />
+				        		<input type="button" id="submit_tab" class="btn btn-default" value="添加" />
+				        	</div>
+				        </div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" id="submit_change" class="btn btn-primary" data-dismiss="modal">确定</button>
+				      </div>
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->				
+				<!--书单包含的小说-->
+				<div class="content_main">
+					<ul id="novel_list">
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师1</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师2</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师3</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师4</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+						<li class="each_novel">
+							<img alt="小说封面" src="../../img/can_delete/hot_book_list_pic.jpg" />
+							<div class="each_novel_right">
+								<a class="del_each_novel" href="javascript:;">删除</a>
+								<h3 title="魔道祖师"><a href="#">魔道祖师</a></h3>
+								<a href="#" class="author">作者</a>
+								<div class="star_black"><div class="star_yellow"></div></div>
+								<!--推荐语与简介-->
+								<div class="text_box">
+									<div class="recommendation">
+										<p class="recommendation_title">推荐语<i title="修改推荐语" class="glyphicon glyphicon-pencil change_recommendation"></i></p>
+										<div class="recommendation_text"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p><input type="button" value="确定" /></div>
+									</div>
+									<div class="summary">
+										<p class="summary_title">小说简介</p>
+										<div class="summary_text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table</div>
+									</div>
+								</div><!--推荐语与简介结束-->
+							</div>
+						</li>
+					</ul>
+					<div class="content_main_pagination"><ul></ul></div>
+				</div><!--书单包含的小说结束-->
+				<!--对该书单的操作-->
+				<div id="operation">
+					<button type="button" class="good">点赞<span>1234</span></button>
+					<button type="button" class="collect">收藏<span>34</span></button>
+					<button type="button" class="share" data-clipboard-action="copy" data-clipboard-text="" data-clipboard-target="#share_message">分享<div id="share_message" class="share_message">已复制到剪贴板，去黏贴吧！</div></button>
+					<button type="button" class="comment">评论</button>
+				</div>
+				<!--评论-->
+				<div id="book_list_comment">
+					<div class="each_comment">
+						<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />
+						<div class="reviewer_message">
+							<a href="#" class="name">默寒</a>
+							<span class="time">2018-01-01 20:33:54</span>
+							<a class="reactive" href="javascript:;">回复</a>
+						</div>
+						<p class="to_reactive"><!--对于要回复的评论的内容-->
+							<span>回复&nbsp;<a href="#">红叔</a>：</span>
+							感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。
+						</p>
+						<p class="comment_content">
+							不奇怪啊，一点都不奇怪，很正常，没毛病。
+						</p>
+					</div>
+					<div class="each_comment">
+						<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />
+						<div class="reviewer_message">
+							<a href="#" class="name">默寒</a>
+							<span class="time">2018-01-01 20:33:54</span>
+							<a class="reactive" href="javascript:;">回复</a>
+						</div>
+						<p class="to_reactive" style="display: none;"><!--对于要回复的评论的内容-->
+							<span>回复&nbsp;<a href="#">红叔</a>：</span>
+							感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。
+						</p>
+						<p class="comment_content">
+							不奇怪啊，一点都不奇怪，很正常，没毛病。
+						</p>
+					</div>
+					<div class="each_comment">
+						<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />
+						<div class="reviewer_message">
+							<a href="#" class="name">默寒</a>
+							<span class="time">2018-01-01 20:33:54</span>
+							<a class="reactive" href="javascript:;">回复</a>
+						</div>
+						<p class="to_reactive"><!--对于要回复的评论的内容-->
+							<span>回复&nbsp;<a href="#">红叔</a>：</span>
+							感觉这篇书单有的奇怪。
+						</p>
+						<p class="comment_content">
+							不奇怪啊，一点都不奇怪，很正常，没毛病。
+						</p>
+					</div>
+					<div class="each_comment">
+						<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />
+						<div class="reviewer_message">
+							<a href="#" class="name">默寒34</a>
+							<span class="time">2018-01-01 20:33:54</span>
+							<a class="reactive" href="javascript:;">回复</a>
+						</div>
+						<p class="to_reactive"><!--对于要回复的评论的内容-->
+							<span>回复&nbsp;<a href="#">红叔</a>：</span>
+							感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。
+						</p>
+						<p class="comment_content">
+							不奇怪啊，一点都不奇怪，很正常，没毛病。
+						</p>
+					</div>
+					<div class="comment_pagination"><ul></ul></div> <!--页数-->
+					<!--点击后出现评论的编辑框-->
+					<div class="edite">
+						<img alt="自己的头像" src="../../img/can_delete/head_portrait.jpg">
+						<div class="edite_right">
+							<div>回复&nbsp;<span>红叔</span>：</div>
+							<textarea></textarea>
+							<button class="cancel">取消</button>
+							<button type="submit" id="submit_comment">提交评论</button>
+						</div>
+					</div>
+				</div><!--评论结束-->
+			</div>
+			
+			<!--右侧栏部分-->
+			<div id="page_right" class="col-xs-12 col-sm-4">
+				<!--书单编辑者信息-->
+				<div class="editor_message">
+					<img alt="小编头像" src="../../img/can_delete/head_portrait.jpg">
+					<a href="#"><h3 class="name" title="uncle_red_红叔">uncle_red_红叔</h3></a>
+					<p class="summary">不超过50个字，都没有留下。这个人很懒，什么都没有留下。这个人很懒，什么都没有留下。这个人很懒，什。</p>
+				</div>
+				<!--相关的热门书单-->
+				<div class="hot_book_list">
+					<h2>更多热门书单</h2>
+					<ul>
+						<!--有6个li-->
+						<li>
+							<a href="#" class="name" title="书单名字不超过不超过不超过20个字">书单名字不超过不超过不超过20个字</a>
+							<a href="#" class="editor_name" >马里奥红叔马里奥</a>
+							<span>点赞2345</span>
+						</li>
+						<li>
+							<a href="#" class="name" title="书单名字不超过20个字">书单名字不超过20个字</a>
+							<a href="#" class="editor_name" >马里奥红叔</a>
+							<span>点赞2345</span>
+						</li>
+						<li>
+							<a href="#" class="name" title="书单名字不超过20个字">书单名字不超过20个字</a>
+							<a href="#" class="editor_name" >马里奥红叔</a>
+							<span>点赞2345</span>
+						</li>
+						<li>
+							<a href="#" class="name" title="书单名字不超过20个字">书单名字不超过20个字</a>
+							<a href="#" class="editor_name" >马里奥红叔</a>
+							<span>点赞2345</span>
+						</li>
+						<li>
+							<a href="#" class="name" title="书单名字不超过20个字">书单名字不超过20个字</a>
+							<a href="#" class="editor_name" >马里奥红叔</a>
+							<span>点赞2345</span>
+						</li>
+						<li>
+							<a href="#" class="name" title="书单名字不超过20个字">书单名字不超过20个字</a>
+							<a href="#" class="editor_name" >马里奥红叔</a>
+							<span>点赞2345</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer>&copy; 广东海洋大学</footer>
+		
+		
+		<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../../dist/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="../../js/jqpaginator.min.js" ></script>
+		<script type="text/javascript" src="../../js/clipboard.min.js" ></script>
+		<script type="text/javascript" src="../../js/book_list/other_page.js" ></script>
+		<script type="text/javascript" src="../../js/head.js" ></script>
+	</body>
+</html>

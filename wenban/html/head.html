@@ -1,0 +1,49 @@
+		<nav>
+			<div><a class="logo" href="#">logo</a></div>
+			<!--电脑与平板的导航-->
+			<ul id="big_nav_ul">
+				<li><a href="index.html" class="active">首页</a></li>
+				<li><a href="html/charts.html" target="_blank">排行榜</a></li>
+				<li><a href="html/book_list.html" target="_blank">书单</a></li>
+				<form method="get" action="html/search.html" target="_blank">
+					<input type="text" id="head_search" placeholder="小说、作者、书单" />
+					<button id="head_search_button" class="glyphicon glyphicon-search"></button>
+				</form>
+				<li class="log">
+					<a href="html/login.html" id="log_in" target="_blank">登录</a>
+					<a href="html/register.html" id="register"  target="_blank">注册</a>
+				</li>
+				<li class="user_message" style="display: none;">
+					<i class="head_portrait"></i>
+					<p>uncle_red</p>
+					<ul id="user_message_list">
+						<li><a href="html/people/my_people.html" target="_blank">个人主页</a></li>
+						<li><a href="#">通知</a></li>
+						<li><a href="html/set/setting.html" target="_blank">账号设置</a></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!--手机的导航-->
+			<div id="little_nav">
+				<button type="button" class="little_nav_button glyphicon glyphicon-menu-hamburger"></button>
+				<ul id="little_nav_ul">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">排行榜</a></li>
+					<li><a href="#">书单</a></li>
+					<li>
+						<ul>
+							<li><a href="#">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">个人主页</a></li>
+							<li><a href="#">退出</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+

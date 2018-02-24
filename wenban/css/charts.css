@@ -1,0 +1,406 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html::-webkit-scrollbar{
+	display: none;
+}
+html{
+	
+	overflow-y: hidden;
+}
+/*固定导航*/
+#fixed_nav{
+	width: 100%;
+	height: 40px;
+	/*background: rgba(237,244,237,.7);*/
+	background: rgba(255,255,255,.8);
+	color: #077007;
+	font-size: 13px;
+	padding: 0 2%;
+	line-height: 40px;
+	min-width: 374px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 50;
+}
+#fixed_nav a{
+	color: #077007;
+}
+#fixed_nav a:hover{
+	text-decoration: none;
+}
+#fixed_nav .icon{
+	width: 15px;
+	height: 15px;
+}
+#fixed_nav .page_title{
+	margin-left: 5px;
+}
+#fixed_nav .fixed_nav_left{
+	float: left;
+}
+#fixed_nav .fixed_nav_right{
+	float: right;
+	width: 238px;
+}
+#fixed_nav .fixed_nav_right .bg_music{
+	float: left;
+	height: 40px;
+	cursor: pointer;
+}
+#fixed_nav .fixed_nav_right .bg_music p{
+	display: inline-block;
+	margin: 0 5px;
+	text-align: center;
+	width: 155px;
+}
+#fixed_nav .fixed_nav_right .bg_music img{
+	width: 14px;
+	height: 14px;
+}
+#fixed_nav .fixed_nav_right .page_nav{
+	float: right;
+	height: 20px;
+	border: 1px solid #077007;
+	border-radius: 5px;
+	width: 55px;
+	text-align: center;
+	line-height: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+	background: transparent;
+	position: relative;
+}
+#fixed_nav .fixed_nav_right .scroll_nav{
+	width: 150px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	top: 19px;
+	text-align: left;
+	color: #000;
+	cursor: auto;
+	font-weight: bold;
+	padding: 5px 0px;
+	display: none;
+}
+#fixed_nav .scroll_nav dd,#fixed_nav .scroll_nav dt{
+	height: 25px;
+	line-height: 25px;
+	width: 100%;
+	padding-left: 5px;
+}
+#fixed_nav .scroll_nav dd i,#fixed_nav .scroll_nav dt i{
+	margin-right: 5px;
+	opacity: 0;
+}
+#fixed_nav .scroll_nav dd a{
+	color: #666;
+	font-weight: 300;
+}
+#fixed_nav .scroll_nav dd a:hover{
+	text-decoration: none;
+	color: #666;
+}
+#fixed_nav .scroll_nav dd.active a{
+	color: #0a580a;
+	font-weight: 400;
+	font-size: 15px;
+}
+#fixed_nav .scroll_nav dd.active i{
+	opacity: 1;
+	color: #0a580a;
+}
+
+/*固定按钮下一页*/
+#next_page_btn{
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	border: 1px solid #EDF4ED;
+	position: fixed;
+	right: 25px;
+	bottom: 10px;
+	z-index: 50;
+}
+#next_page_btn i{
+	display: block;
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 30px;
+	color: #EDF4ED;
+	cursor: pointer;
+}
+
+/*视频*/
+#mp4{
+	width: 100%;
+	z-index: 6;
+	position: relative;
+}
+#mp4 video,#mp4 img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#mp4 video{
+	 object-fit:fill;
+}
+#mp4 .video_text{
+	width: 40%;
+	height: 40%;
+	left: 30%;
+	top: 35%;
+}
+
+/*排行榜主体*/
+.each_page{
+	width: 100%;
+	background: url(../img/charts/bg_p1.jpg) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	
+	overflow: hidden;
+}
+.each_page_content{
+	margin: 0 auto;
+	width: 1024px;
+	padding-top: 9%;
+}
+/*第一名小说*/
+.each_page_content .first_novel{
+	width: 480px;
+	background: rgba(89, 137, 120, 0.8);
+	padding: 20px;
+	border-radius: 7px;
+	overflow: auto;
+	color: #fff;	
+	font-size: 14px;
+	float: left;
+}
+.each_page_content .first_novel img{
+	width: 156px;
+	float: left;
+	cursor: pointer;
+}
+.each_page_content .first_novel .first_novel_right{
+	margin-left: 20px;
+	float: left;
+	width: 264px;
+}
+.each_page_content .first_novel .each_page_title{
+	font-size: 23px;
+	font-weight: 400;
+	height: 60px;
+	border-bottom: 1px solid #fff;
+	line-height: 50px;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+.each_page_content .first_novel .order_number{
+	background: #E58B00;
+	height: 20px;
+	width: 50px;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	font-size: 16px;
+	float: left;
+}
+.each_page_content .first_novel h4{
+	font-weight: bold;
+	font-size: 20px;
+	width: 204px;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	margin: -3px 0 10px 10px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.each_page_content .first_novel .author{
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+.each_page_content .first_novel .star{
+	width: 65px;
+	height: 14px;
+	background: url(../img/score_star.png) 0px -130px no-repeat;
+	background-size: 65px;
+	display: inline-block;
+	float: left;
+}
+.each_page_content .first_novel .star .star_yellow{
+	width: 91%;
+	height: 14px;
+	background: url(../img/score_star.png) 0px 0px no-repeat;
+	background-size: 65px;
+}
+.each_page_content .first_novel .score,.each_page_content .first_novel .assess_people{
+	margin-left: 7px;
+	display: inline-block;
+	margin-top: -3px;
+	float: left;
+}
+.each_page_content .first_novel .short_comment{
+	clear: both;
+	margin-top: 20px;
+	color: #ccc;
+}
+/*2到10名小说*/
+.each_page_content .other_novel .inner_other_novel{
+	width: 530px;
+	height: 497px;
+	float: right;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin-top: -5%;
+}
+.each_page_content .other_novel .other_each_novel{
+	display: inline-block;
+	width: 142px;
+	height: 120px;
+	margin: 0 5px 64px;
+	border-radius: 7px;
+	background: rgba(255,255,255,.5);
+	color: #089108;
+	position: relative;
+}
+.each_page_content .other_novel .other_each_novel img{
+	width: 86px;
+	position: absolute;
+	left: 15px;
+	bottom: 46px;
+	cursor: pointer;
+}
+.each_page_content .other_novel .other_each_novel .order_number{
+	position: absolute;
+	right: 9px;
+	top: 3px;
+	width: 23px;
+	height: 23px;
+	display: block;
+	text-align: center;
+	line-height: 23px;
+}
+.each_page_content .other_novel .other_each_novel p{
+	position: absolute;
+	left: 15px;
+	top: 78px;
+	width: 120px;
+	height: 37px;
+	display: block;
+	cursor: pointer;
+}
+.each_page_content .other_novel .other_each_novel p span{
+	color: #E58B00;
+	cursor: auto;
+}
+
+/*结束页*/
+#p11{
+	background: url(../img/charts/bg_p5.jpg) no-repeat;
+	text-decoration: none;
+}
+#p11 h1{
+	text-indent: 9999px;
+	background: url(../img/charts/fin.png) no-repeat;
+	background-size: cover;
+	width: 98px;
+	height: 46px;
+	margin: 10% auto 3%;
+}
+#p11 p{
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-family: STFangsong,Fangsong,FangSong_GB2312,STSong,serif;
+	/*margin-top: 20px;*/
+}
+
+
+/*手机,包括了ipad*/
+@media only screen and (max-width: 1024px) {
+	/*固定按钮下一页*/
+	#next_page_btn{
+		width: 100%;
+		border: none;
+		right: 0;
+	}
+	#next_page_btn i{
+		margin: 0 auto;
+	}
+	
+	/*每个页面*/
+	.each_page_content{
+		width: 96%;
+		margin: 0 2%;
+	}
+	.first_novel{
+		margin-left: 5%;
+	}
+	.each_page_content .other_novel{
+		float: left;
+		width: 100%;
+		height: 180px;
+		margin-top: 40%;
+		position: relative;
+		overflow: hidden;
+	}
+	.each_page_content .other_novel .inner_other_novel{
+		width: 1465px;
+		height: 270px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		flex-wrap: nowrap;
+	}
+}
+/*手机*/
+@media only screen and (max-width: 380px){
+	.each_page_content .first_novel{
+		width: 90%;
+		padding: 10px;
+	}
+	.each_page_content .first_novel img{
+		width: 35%;
+	}
+	.each_page_content .first_novel .first_novel_right{
+		margin-left: 15px;
+		width: 176px;
+	} 
+	.each_page_content .first_novel .each_page_title{
+		font-size: 20px;
+		margin-bottom: 10px;
+		height: 48px;
+	}
+	.each_page_content .first_novel .order_number{
+		height: 18px;
+		widows: 43px;
+		border-radius: 9px;
+		line-height: 18px;
+	}
+	.each_page_content .first_novel h4{
+		width: 116px;
+	}
+	.each_page_content .other_novel{
+		margin-top: 20%;
+	}
+	.each_page_content .other_novel .inner_other_novel{
+		height: 256px;
+	}
+}
