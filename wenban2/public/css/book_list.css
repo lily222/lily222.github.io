@@ -1,0 +1,143 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#book_list_main{
+	width: 92%;
+    margin: 0px 4%;
+}
+/*选项卡按钮*/
+#book_list_main ul{
+	margin-top: 30px;
+	height: 40px;
+	min-width: 374px;
+}
+#book_list_main li{
+	float: left;
+	height: 40px;
+}
+#book_list_main li.active{
+	background: #228A31;
+}
+#book_list_main li a{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	color: #228A31;
+	text-decoration: none;
+	font-size: 18px;
+}
+#book_list_main li.active a{
+	color: #fff;
+}
+
+/*书单列表*/
+#book_list_list{
+	width: 100%;
+}
+#book_list_list .each_book_list{
+	width: 17.8%;
+	margin: 10px 1% 0px 1%;
+	display: inline-block;
+	box-shadow: 0 0 10px #000;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+#book_list_list .each_book_list:nth-child(5),#book_list_list .each_book_list:nth-child(10){
+	margin-right: 0;
+}
+#book_list_list .each_book_list img {
+	width: 100%;
+	height: 100%;
+}
+
+#book_list_list .book_list_content {
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	bottom: -70px;
+	left: 0;
+	color: #FFF;
+	background: rgba(0, 0, 0, .7);
+	font-size: 1.1em;
+}
+
+#book_list_list .book_list_content h3 {
+	letter-spacing: 1px;
+	padding-left: 5%;
+	padding-right: 4%;
+	margin-top: 10px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #09fe09;
+	font-size: 20px;
+}
+
+#book_list_list .book_list_content i {
+	margin-left: 5%;
+}
+
+#book_list_list .book_list_content span {
+	margin-left: 2%;
+}
+
+#book_list_list .book_list_content .book_list_tab {
+	display: block;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;	
+}
+/*分页页数*/
+.pagi_out{
+	width: 100%;
+	text-align: center;
+}
+#pagi{
+	display: inline-block;
+	margin: 0 auto;
+	height: 30px;
+	line-height: 30px;
+}
+#pagi li{
+	height: 30px;
+	line-height: 30px;
+}
+#pagi li a{
+	height: 30px;
+	line-height: 30px;
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media only screen and (min-width: 768px) and (max-width:994px){
+	/*热门书单*/
+	#book_list_list .each_book_list{
+		width: 30.9%;
+	}
+	#book_list_list .each_book_list:nth-child(5),#book_list_list .each_book_list:nth-child(10){
+		margin: 10px 1% 0px 1%;
+	}
+	#book_list_list .book_list_content{
+		bottom: 0px;
+	}
+}
+
+/* 超小小屏幕（手机，小于 768px） */
+@media only screen and (max-width: 768px){
+	/*热门书单*/
+	#book_list_list .each_book_list{
+		width: 47.3%;
+	}
+	#book_list_list .each_book_list:nth-child(5),#book_list_list .each_book_list:nth-child(10){
+		margin: 10px 1% 0px 1%;
+	}
+	#book_list_list .book_list_content{
+		bottom: 0px;
+	}
+}

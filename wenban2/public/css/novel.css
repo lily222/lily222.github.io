@@ -1,0 +1,365 @@
+#middle{
+	width: 92%;
+	margin: 0 4%;
+	overflow: hidden;
+}
+h3{
+	color: #228A31 !important;
+	letter-spacing: 2px;
+	font-size: 24px;
+	margin-top: 40px;
+}
+/*基本信息*/
+#middle_left .message{
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+#middle_left .message h3{
+	color: #000000;
+	font-size: 28px;
+	margin-bottom: 25px;
+	margin-top: 20px;
+}
+#middle_left .message img{
+	width: 100px;
+	height: 140px;
+	float: left;
+}
+#middle_left .message .mes{
+	margin-left: 10px;
+	display: inline-block;
+	padding-top: 20px;
+	height: 140px;
+	width: 280px;
+}
+#middle_left .message .mes a{
+	cursor: pointer;
+}
+#middle_left .message .mark{
+	float: right;
+	height: 140px;
+	border-left: 1px solid #999;
+	background: #fff;
+	padding-left: 10px;
+}
+#middle_left .message .mark > span{
+	color: #999;
+	font-size: 13px;
+	display: block;
+	margin-bottom: 15px;
+}
+#middle_left .message .mark b{
+	font-size: 50px;
+	color: #FFAC2D;
+}
+#middle_left .message .mark > div{
+	display: inline-block;
+}
+#middle_left .message .mark .star_black{
+	display: inline-block;
+	width: 75px;
+	height: 14px;
+	background: url(../img/score_star.png) 0px -150px no-repeat;
+	background-size: 75px;
+	position: relative;
+	top: 1px;
+}
+#middle_left .message .mark .star_yellow{
+	display: block;
+	width: 75%;
+	height: 14px;
+	background: url(../img/score_star.png) 0px 0px no-repeat;
+	background-size: 75px;
+	position: absolute;
+	top: 0px;
+}
+/*功能*/
+#middle_left .btn_function button{
+	background-color: #82C882;
+	border: 1px solid #ccc;
+	padding: 2px 5px;
+	color: #000;
+	font-size: 16px;
+	margin-right: 10px;
+	border-radius: 5px;
+	outline: none;
+	margin-bottom: 10px;
+}
+#middle_left .btn_function .shear{
+	position: relative;
+	outline: none;
+}
+#middle_left .btn_function .shear_message{
+	position: absolute;
+	bottom: 35px;
+	left: -110px;
+	padding: 5px 20px;
+	width: 275px;
+	height: 30px;
+	background: #fff;
+	border: 1px solid #999;
+	display: none; 	
+	outline: none;
+}
+/*小说标签*/
+#middle_left .tabs{
+	overflow: hidden;
+}
+#middle_left .tabs li{
+	float: left;
+	margin-right: 10px;
+	padding: 3px 10px;
+	background: #96B97D;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+/*短评*/
+#middle_left .short_comment,#middle_left .long_comment{
+	color: #337ab7;
+}
+#middle_left .short_comment ul,#middle_left .long_comment ul{
+	color: #000;
+}
+#middle_left .short_comment h3,#middle_left .long_comment h3{
+	display: inline-block;
+}
+#middle_left .edit_lcoment,#middle_left .edit_scoment{
+	float: right;
+	padding: 2px 10px;
+	color: #000;
+	font-size: 14px;
+	background: #C9E2B3;
+	border: 1px solid #ccc;
+	outline: none;
+	margin-top: 40px;
+}
+#middle_left .short_comment > div,#middle_left .long_comment > div{
+	overflow: hidden;
+}
+#middle_left .edit_lcoment:hover,#middle_left .edit_scoment:hover{
+	background: #B4F6B4;
+}
+#middle_left .edit_lcoment i,#middle_left .edit_scoment i{
+	margin-right: 5px;
+	font-size: 13px;
+	color: #228A31;
+}
+#middle_left .short_comment a,#middle_left .long_comment a{
+	text-decoration: none;
+}
+#middle_left .short_comment a:hover,#middle_left .long_comment a:hover{
+	color: #fff;
+	background: #3377AA;
+}
+#middle_left .short_comment .star_black,#middle_left .long_comment .star_black{
+	display: inline-block;
+	width: 70px;
+	height: 14px;
+	background: url(../img/score_star.png) 0px -140px no-repeat;
+	background-size: 70px;
+	position: relative;
+	top: 1px;
+	margin: 0 5px;
+}
+#middle_left .short_comment .star_yellow,#middle_left .long_comment .star_yellow{
+	background: url(../img/score_star.png) 0px 0px no-repeat;
+	background-size: 70px;
+	height: 14px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 40%;
+}
+#middle_left .short_comment ul button{
+	background: rgba(0,0,0,.1);
+	border: 1px solid #999;
+	margin-left: 10px;
+	outline: none;
+	padding: 1px 5px;
+	font-size: 13px;
+	border-radius: 5px;
+}
+#middle_left .short_comment ul button:hover{
+	background: rgba(0,0,0,.2);
+}
+#middle_left .short_comment ul{
+	margin-top: 20px;
+}
+#middle_left .short_comment ul li{
+	margin-bottom: 20px;
+}
+#middle_left .short_comment ul li p{
+	margin-top: 5px;
+}
+/*书评*/
+#middle_left .long_comment ul{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+#middle_left .long_comment ul li{
+	margin-bottom: 25px;
+}
+#middle_left .long_comment img{
+	width: 40px;
+}
+#middle_left .long_comment ul button{
+	background: rgba(0,0,0,.1);
+	border: 1px solid #999;
+	padding: 1px 5px;
+	margin-right: 10px;
+	font-size: 13px;
+	outline: none;
+}
+#middle_left .long_comment ul button:hover{
+	background: rgba(0,0,0,.2);
+}
+#middle_left .long_comment button i{
+	margin-right: 5px;
+}
+/*弹出框*/
+#blist_modal .modal-title{
+	letter-spacing: 2px;
+	color: #228A31;
+	font-weight: bold;
+}
+#blist_modal .modal-body{
+	overflow: hidden;
+}
+#blist_modal .modal-footer #submit_change{
+	background: #228A31;
+}
+#blist_modal .left{
+	width: 30%;
+	border-right: 1px solid #000;
+	text-align: center;
+	float: left;
+}
+#blist_modal .left img{
+	width: 130px;
+	height: 182px;
+	margin: 0 auto;
+}
+#blist_modal .left p{
+	margin-top: 10px;
+}
+#blist_modal .right{
+	width: 70%;
+	float: right;
+	padding-left: 10px;
+}
+#blist_modal .right h5{
+	color: #228A31;
+	font-size: 15px;
+}
+#blist_modal .right ul{
+	margin-bottom: 20px;
+	width: 100%;
+	height: 100px;
+	overflow: auto;
+}
+#blist_modal .right ul li{
+	padding: 3px 10px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+#blist_modal .right ul li:hover{
+	background: #82C882;
+}
+#blist_modal .right ul li.sele{
+	background: #228A31;
+	color: #fff;
+}
+#blist_modal .right .recommend{
+	position: relative;
+}
+#blist_modal .right .recommend span{
+	position: absolute;
+	right: 0px;
+	top:5px;
+	font-size: 13px;
+}
+#blist_modal .right .recommend textarea{
+	width: 100%;
+	height: 60px;
+}
+
+/*主体右侧*/
+#middle_right .advert{
+	width: 100%;
+	margin-top: 50px;
+	position: relative;
+}
+#middle_right .advert img{
+	width: 100%;
+}
+#middle_right .advert span{
+	display: block;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 45px;
+	height: 20px;
+	background: rgba(0,0,0,.4);
+	color: #FFF;
+	text-align: center;
+	border-radius: 20px 0px 0px 0px;
+}
+/*热门小说*/
+#middle_right .similar_novel{
+	margin-top: 50px;
+	text-align: center;
+}
+#middle_right .similar_novel ul{
+	margin-top: 18px;
+}
+#middle_right .similar_novel ul >li{
+	margin-bottom: 20px;
+}
+#middle_right .similar_novel ul >li a:first-child{
+	font-size: 17px;
+	color:#28c07e;
+	text-decoration: none;
+}
+#middle_right .similar_novel ul >li a:first-child:hover,#middle_right .similar_novel ul >li a:hover{
+	color: #fff;
+	background: #3377AA;
+}
+#middle_right .similar_novel ul >li a{
+	color: #999;
+	text-decoration: none;
+}
+#middle_right .similar_novel ul >li .star_black{
+	display: inline-block;
+	width: 75px;
+	height: 14px;
+	background:url(../img/score_star.png) 0px -150px no-repeat;
+	background-size: 75px;
+	position: relative;
+	top: 1px;
+}
+#middle_right .similar_novel ul >li .star_yellow{
+	width: 80%;
+	height: 14px;
+	background:url(../img/score_star.png) 0px 0px no-repeat;
+	background-size: 75px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*上方的基本信息*/
+@media only screen and (max-width: 970px) {
+	#middle_left .message .mark {
+		float: left;
+	}
+}
+@media only screen and (max-width: 564px){
+	#blist_modal .left{
+		display: none;
+	}
+	#blist_modal .right{
+		width: 100%;
+	}
+}

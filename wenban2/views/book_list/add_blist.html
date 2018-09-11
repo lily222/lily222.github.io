@@ -1,0 +1,40 @@
+{% extends '../head.html' %}
+{%block hesderdifferent%}
+<title>添加新书单</title>
+<link rel="stylesheet" href="/public/css/add_blist.css" />
+{%endblock%}
+
+{% block middle%}
+<div class="middle">
+	<h3>创建书单</h3>
+	<form id="creat_blist">
+		<div><label>书单名</label><input type="text" class="book_list_name" name="book_list_name" /></div>
+		<div class="tabs">
+			<label>选择标签<span>(最多10个)</span></label>
+			<input type="button" value="现代言情" />
+			<input type="button" value="古代言情" />
+			<input type="button" value="穿越" />
+			<input type="button" value="女配" />
+			<input type="button" value="重生" />
+			<input type="button" value="修真" />
+			<input type="button" value="灵异" />
+			<input type="button" value="游戏" />
+			<input type="button" value="星际" />
+			<input type="button" value="武侠" />
+			<input type="button" value="耽美" />
+			<input type="button" value="直播" />
+			<input type="button" value="强强" />
+		</div>
+		<div class="add_tabs">
+			<input type="text" class="new_tab" placeholder="输入新标签" />
+			<input type="button" class="" value="添加" />
+		</div>
+		<div>
+			<button type="button" class="submit_blist">确定</button>
+			<button type="button">取消</button>
+		</div>
+	</form>
+</div>
+<script type="text/javascript" src="/public/js/book_list/add_blist.js" ></script>
+{%endblock%}
+

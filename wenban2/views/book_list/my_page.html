@@ -1,0 +1,193 @@
+{% extends '../head.html' %}
+{%block hesderdifferent%}
+<title>书单的标题xxx</title>
+<link rel="stylesheet" href="/public/css/book_list_page.css" />
+{%endblock%}
+
+{% block middle%}
+<div class="middle">
+	<!--左边主体部分-->
+	<div id="page_main" class="col-xs-12 col-sm-8">
+		<!--书单相关信息-->
+		<img class="book_list_cover" alt="书单封面" src="../../img/can_delete/webwxgeticon.jpg" />
+		<div class="change_cover">更换</br>图片</div>
+		<h3 class="book_list_name"><span>高</span><i title="修改标题" class="glyphicon glyphicon-pencil change_book_list_name"></i></h3>
+		<div style="clear: both;"></div>
+		<a href="#" class="editor_name">uncle_red_红叔</a>
+		<span class="time">2018-01-12 15:33:47</span>
+		<p class="tab">标签：<span><i>强强、古代、bg、</i><input type="button" class="change_tab" value="修改标签" data-target="#tab_modal" data-toggle="modal" /></span></p>
+		<!--修改标签弹出框-->
+		<div id="tab_modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">修改标签</h4>
+					</div>
+					<div class="modal-body"><!--弹出框主体部分-->
+						<div class="old_tab">
+							<span>标签：</span>
+							<ul>
+								<li>拉拉</li>
+								<li>拉拉</li>
+								<li>拉拉</li>
+								<li>拉拉啦啦啦</li>
+								<li>拉拉</li>
+							</ul>
+						</div>
+						<div class="add_tab">
+							<span>添加新标签：</span>
+							<ul>
+								<li>直播</li>
+								<li>网红</li>
+								<li>强强</li>
+								<li>穿越</li>
+								<li>同人</li>
+								<li>星际</li>
+								<li>洪荒</li>
+								<li>修真</li>
+								<li>游戏</li>
+								<li>灵异</li>
+								<li>重生</li>
+								<li>机甲</li>
+								<li>娱乐圈</li>
+								<li>武侠</li>
+								<li>古色古香</li>
+								<li>近代现代</li>
+								<li>幻想未来</li>
+							</ul>
+							<div class="write">
+								<input type="text" class="new_tab" />
+								<input type="button" id="submit_tab" class="btn btn-default" value="添加" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" id="submit_change" class="btn btn-primary" data-dismiss="modal">确定</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--书单包含的小说-->
+		<div class="content_main">
+			<ul id="novel_list">
+			</ul>
+			<!--页数-->
+			<!--<div class="content_main_pagination"><ul></ul></div>-->
+		</div><!--书单包含的小说结束-->
+		<!--对该书单的操作-->
+		<div id="operation">
+			<button type="button" data-good="0" class="good">点赞<span>1234</span></button>
+			<button type="button" data-col="0" class="collect">收藏<span>34</span></button>
+			<button type="button" class="share" data-clipboard-action="copy" data-clipboard-text="" data-clipboard-target="#share_message">分享<div id="share_message" class="share_message">已复制到剪贴板，去黏贴吧！</div></button>
+			<!--<button type="button" class="comment">评论</button>-->
+			<button type="button" class="delete">删除</button>
+		</div>
+		<!--评论-->
+		<!--<div id="book_list_comment">-->
+			<!--<div class="each_comment">-->
+				<!--<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />-->
+				<!--<div class="reviewer_message">-->
+					<!--<a href="#" class="name">默寒</a>-->
+					<!--<span class="time">2018-01-01 20:33:54</span>-->
+					<!--<a class="reactive" href="javascript:;">回复</a>-->
+				<!--</div>-->
+				<!--<p class="to_reactive">&lt;!&ndash;对于要回复的评论的内容&ndash;&gt;-->
+					<!--<span>回复&nbsp;<a href="#">红叔</a>：</span>-->
+					<!--感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。-->
+				<!--</p>-->
+				<!--<p class="comment_content">-->
+					<!--不奇怪啊，一点都不奇怪，很正常，没毛病。-->
+				<!--</p>-->
+			<!--</div>-->
+			<!--<div class="each_comment">-->
+				<!--<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />-->
+				<!--<div class="reviewer_message">-->
+					<!--<a href="#" class="name">默寒</a>-->
+					<!--<span class="time">2018-01-01 20:33:54</span>-->
+					<!--<a class="reactive" href="javascript:;">回复</a>-->
+				<!--</div>-->
+				<!--<p class="to_reactive" style="display: none;">&lt;!&ndash;对于要回复的评论的内容&ndash;&gt;-->
+					<!--<span>回复&nbsp;<a href="#">红叔</a>：</span>-->
+					<!--感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。-->
+				<!--</p>-->
+				<!--<p class="comment_content">-->
+					<!--不奇怪啊，一点都不奇怪，很正常，没毛病。-->
+				<!--</p>-->
+			<!--</div>-->
+			<!--<div class="each_comment">-->
+				<!--<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />-->
+				<!--<div class="reviewer_message">-->
+					<!--<a href="#" class="name">默寒</a>-->
+					<!--<span class="time">2018-01-01 20:33:54</span>-->
+					<!--<a class="reactive" href="javascript:;">回复</a>-->
+				<!--</div>-->
+				<!--<p class="to_reactive">&lt;!&ndash;对于要回复的评论的内容&ndash;&gt;-->
+					<!--<span>回复&nbsp;<a href="#">红叔</a>：</span>-->
+					<!--感觉这篇书单有的奇怪。-->
+				<!--</p>-->
+				<!--<p class="comment_content">-->
+					<!--不奇怪啊，一点都不奇怪，很正常，没毛病。-->
+				<!--</p>-->
+			<!--</div>-->
+			<!--<div class="each_comment">-->
+				<!--<img src="../../img/can_delete/webwxgeticon.jpg" alt="评论者头像" />-->
+				<!--<div class="reviewer_message">-->
+					<!--<a href="#" class="name">默寒34</a>-->
+					<!--<span class="time">2018-01-01 20:33:54</span>-->
+					<!--<a class="reactive" href="javascript:;">回复</a>-->
+				<!--</div>-->
+				<!--<p class="to_reactive">&lt;!&ndash;对于要回复的评论的内容&ndash;&gt;-->
+					<!--<span>回复&nbsp;<a href="#">红叔</a>：</span>-->
+					<!--感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。感觉这篇书单有的奇怪。-->
+				<!--</p>-->
+				<!--<p class="comment_content">-->
+					<!--不奇怪啊，一点都不奇怪，很正常，没毛病。-->
+				<!--</p>-->
+			<!--</div>-->
+			<!--<div class="comment_pagination"><ul></ul></div> &lt;!&ndash;页数&ndash;&gt;-->
+			<!--&lt;!&ndash;点击后出现评论的编辑框&ndash;&gt;-->
+			<!--<div class="edite">-->
+				<!--<img alt="自己的头像" src="../../img/can_delete/head_portrait.jpg">-->
+				<!--<div class="edite_right">-->
+					<!--<div>回复&nbsp;<span>红叔</span>：</div>-->
+					<!--<textarea></textarea>-->
+					<!--<button class="cancel">取消</button>-->
+					<!--<button type="submit" id="submit_comment">提交评论</button>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>&lt;!&ndash;评论结束&ndash;&gt;-->
+	</div>
+
+	<!--右侧栏部分-->
+	<div id="page_right" class="col-xs-12 col-sm-4">
+		<!--书单编辑者信息-->
+		<div class="editor_message">
+			<img alt="小编头像" src="{{alldate.editor.UserHead}}">
+			<a href="/user?userID={{alldate.editor.UserPhone}}"><h3 class="name" title="{{alldate.editor.Username}}">{{alldate.editor.Username}}</h3></a>
+			<p class="summary">{{alldate.editor.UserAbstract}}</p>
+		</div>
+		<!--相关的热门书单-->
+		<div class="hot_book_list">
+			<h2>更多热门书单</h2>
+			<ul>
+				{% for hotblist in alldate.hotblist %}
+				<li>
+					<a href="/booklist/page?blistID={{hotblist.BooklistID}}&userID={{hotblist.BooklistEditID}}" class="name" title="{{hotblist.BooklistTitle}}">{{hotblist.BooklistTitle}}</a>
+					<a href="/user/peoplepage?userID={{hotblist.BooklistEditID}}" class="editor_name" >{{hotblist.Username}}</a>
+					<span>点赞{{hotblist.BooklistGood}}</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="/public/dist/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="/public/js/jqpaginator.min.js" ></script>
+<script type="text/javascript" src="/public/js/clipboard.min.js" ></script>
+<script type="text/javascript" src="/public/js/book_list/other_page.js" ></script>
+{%endblock%}
+

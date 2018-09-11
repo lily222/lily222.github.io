@@ -1,0 +1,109 @@
+{% extends '../head.html' %}
+{%block hesderdifferent%}
+<title>编辑长评</title>
+<link rel="stylesheet" href="/public/css/comment/edit_comment.css" />
+{%endblock%}
+
+{% block middle%}
+<div class="middle">
+	<!--左侧部分-->
+	<div id="middle_left" class="col-xs-12 col-sm-8">
+		<h3>评论《<span id="novel_name">{{novelDate.Novelname}}</span>》</h2>
+			<form id="form_com" method="post" action="">
+				<!--题目-->
+				<div id="com_title">
+					<label for="com_title_text">题目</label>
+					<input type="text" id="com_title_text" value="{{commentDate.LCommentTitle}}" />
+					<input type="text" id="lComment_id" value="{{commentDate.LCommentID}}" style="display: none;">
+				</div>
+				<!--评分-->
+				<div id="com_evaluate">
+					<label class="com_evaluate_name">评价</label>
+					<label class="radio">
+						<input type="radio" value="2" name="com_evaluate_num" />
+						很差
+					</label>
+					<label class="radio">
+						<input type="radio" value="4" name="com_evaluate_num" />
+						较差
+					</label>
+					<label class="radio">
+						<input type="radio" value="6" name="com_evaluate_num" />
+						还行
+					</label>
+					<label class="radio">
+						<input type="radio" value="8" name="com_evaluate_num" />
+						不错
+					</label>
+					<label class="radio">
+						<input type="radio" value="10" name="com_evaluate_num" />
+						力荐
+					</label>
+				</div>
+				<!--正文-->
+				<div id="com_content">
+					<label for="com_text">正文</label>
+					<button type="button" title="插入图片" id="add_pic_btn" class="btn btn-default" data-toggle="modal" data-target=".add_pic">图片</button>
+					<div id="add_pic" class="modal fade add_pic" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<form id="add_pic_form" method="post" action="/api/comment/addpic">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="add_pic_title">添加图片</h4>
+								</div>
+								<div class="modal-body">
+									选择图片：
+									<input id="add_pic_input" type="file" accept="image/jpg, image/jpeg, image/gif, image/png, image/bmp" name="picfile" />
+									<p>上传的图片不能超过5M</p>
+								</div>
+								<div class="modal-footer">
+									<button id="add_pic_save" type="submit" class="btn btn-primary" data-dismiss="modal">保存</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								</div>
+								</form>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					<div id="com_text" contenteditable="true"></div>
+				</div>
+				<!--发表-->
+				<input class="submit" type="submit" value="发表" />
+				<!--取消-->
+				<button type="button" class="btn btn-primary com_cancel" data-toggle="modal" data-target=".leave_page">取消</button>
+				<div id="leave_page" class="modal fade leave_page" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="gridSystemModalLabel">取消发表文字</h4>
+							</div>
+							<div class="modal-body">
+								文字还未保存，确定要放弃编辑吗？
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">留在此页</button>
+								<button id="leave" type="button" class="btn btn-primary">确定离开</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+
+			</form>
+	</div>
+	<!--右侧部分-->
+	<div id="middle_right" class="col-xs-12 col-sm-4">
+		<!--评论的小说信息-->
+		<div class="novel">
+			<a href="/novel?novelID={{novelDate.NovelID}}"><i class="glyphicon glyphicon-menu-right"></i>{{novelDate.Novelname}}</a></br>
+			<img src="{{novelDate.NovelCover}}">
+			<p class="autor">作者：<span>{{novelDate.Authorname}}</span></p>
+			<p class="tab">标签：<span>{{novelDate.tab}}</span></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/public/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/public/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="/public/js/comment/edit_comment.js" ></script>
+{%endblock%}
+

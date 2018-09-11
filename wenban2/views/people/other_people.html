@@ -1,0 +1,182 @@
+{% extends '../head.html' %}
+
+{%block hesderdifferent%}
+<title>个人主页</title>
+<link rel="stylesheet" href="../../public/css/my_people.css" />
+
+<style type="text/css">
+	/*关注此人*/
+	#middle_right .personal_message .follow{
+		color: #584e46;
+		border: 1px solid #d6b79d;
+		background: #ffe6ce;
+		margin-bottom: 20px;
+		padding: 1px 6px;
+		outline: none;
+	}
+</style>
+{% endblock %}
+
+{%block middle%}
+<div class="middle">
+	<!--左侧部分-->
+	<div id="middle_left" class="col-xs-12 col-sm-8">
+		<div class="message">
+			<img src="../../public/img/people.png" />
+			<h3>马里奥红叔</h3>
+		</div>
+		<!--我的收藏-->
+		<div id="collect">
+			<h3>他的收藏 · · · · · ·</h3>
+			<span class="more">（<a href="#">更多</a>）</span>
+			<div class="collect_content">
+				<ul>
+					<li class="book_list">
+						<a class="collect_button active" href="javascript:;">书单</a>
+						<ol class="collect_right active">
+							{% for blist in collect.blist %}
+							<li>
+								<img src="{{blist.blistmes.BooklistCover}}" />
+								<a href="/booklist/page?userID={{blist.blistmes.BooklistEditID}}&blistID={{blist.CollectCID}}">{{blist.blistmes.BooklistTitle}}</a></br>
+								<p>点赞{{blist.blistmes.BooklistGood}}</p>
+							</li>
+							{% endfor %}
+						</ol>
+					</li>
+					<li class="novel">
+						<a class="collect_button" href="javascript:;">小说</a>
+						<ol class="collect_right">
+							{% for novel in collect.novel %}
+							<li>
+								<img src="{{novel.novelmes.NovelCover}}" />
+								<a href="/novel?novelID={{novel.novelmes.NovelID}}"><h4>{{novel.novelmes.Novelname}}</h4></a></br>
+								<a class="author" href="/author?authorID={{novel.novelmes.NovelAuthor}}">{{novel.novelmes.Authorname}}</a>
+								<div class="star_black"><div class="star_yellow" style="width:{{novel.novelmes.gradewidth}} ;"></div></div>
+								<span>{{novel.novelmes.NovelGrade}}分</span>
+								<p>{{novel.novelmes.NovelAbstract}}</p>
+							</li>
+							{% endfor %}
+						</ol>
+					</li>
+					<li class="comment">
+						<a class="collect_button" href="javascript:;">书评</a>
+						<ol class="collect_right">
+							{% for lcomment in collect.lcomment %}
+							<li>
+								<img src="{{lcomment.lcommentmes.NovelCover}}" />
+								<div class="right">
+									<a href="/comment?commentID={{lcomment.CollectCID}}"><h4>{{lcomment.lcommentmes.LCommentTitle}}</h4></a></br>
+									<p>对《<a href="#">{{lcomment.lcommentmes.Novelname}}</a>》评论</p>
+									<div class="star_black"><div class="star_yellow" style="width: {{lcomment.lcommentmes.gradewidth}};"></div></div>
+									<p class="text" >{{lcomment.lcommentmes.LCommentContent}}</p>
+								</div>
+							</li>
+							{% endfor %}
+						</ol>
+					</li>
+				</ul>
+			</div>
+		</div><!--我的收藏结束-->
+		<!--我的书单-->
+		<div id="book_list">
+			<div class="title">
+				<h3>他的书单 · · · · · ·</h3>
+				<span class="more">（<a href="#">更多</a>）</span>
+			</div>
+			<ul class="content">
+				<!--只有一行-->
+			</ul>
+		</div><!--我的书单结束-->
+		<!--我的书评-->
+		<div id="comment">
+			<div class="title">
+				<h3>他的书评 · · · · · ·</h3>
+				<span class="more">（<a href="#">更多</a>）</span>
+			</div>
+			<ul class="content">
+				<div id="none"></div>
+
+			</ul>
+		</div><!--我的书评结束-->
+		<!--留言板-->
+		<!--<div id="message_board">-->
+			<!--<div class="title">-->
+				<!--<h3>留言板 · · · · · ·</h3>-->
+				<!--<span class="more">（<a href="#">更多</a>）</span>-->
+			<!--</div>-->
+			<!--<div class="leave_message">-->
+				<!--<textarea></textarea>-->
+				<!--<button type="button">留言</button>-->
+			<!--</div>-->
+			<!--<div class="content">-->
+				<!--<div class="each_message">-->
+					<!--<img src="../../public/img/can_delete/head_portrait.jpg">-->
+					<!--<div class="top_right">-->
+						<!--<a class="commenter" href="#">留言者</a>-->
+						<!--<label>2018-04-11 12:20:39</label>-->
+					<!--</div>-->
+					<!--<p>你若安好，便是晴天！</p>-->
+				<!--</div>-->
+				<!--<div class="each_message">-->
+					<!--<img src="../../public/img/can_delete/head_portrait.jpg">-->
+					<!--<div class="top_right">-->
+						<!--<a class="commenter" href="#">留言者</a>-->
+						<!--<label>2018-04-11 12:20:39</label>-->
+					<!--</div>-->
+					<!--<p>你若安好，便是晴天！</p>-->
+				<!--</div>-->
+				<!--<div class="each_message">-->
+					<!--<img src="../../public/img/can_delete/head_portrait.jpg">-->
+					<!--<div class="top_right">-->
+						<!--<a class="commenter" href="#">留言者</a>-->
+						<!--<label>2018-04-11 12:20:39</label>-->
+					<!--</div>-->
+					<!--<p>你若安好，便是晴天！</p>-->
+				<!--</div>-->
+				<!--<div class="each_message">-->
+					<!--<img src="../../public/img/can_delete/head_portrait.jpg">-->
+					<!--<div class="top_right">-->
+						<!--<a class="commenter" href="#">留言者</a>-->
+						<!--<label>2018-04-11 12:20:39</label>-->
+					<!--</div>-->
+					<!--<p>你若安好，便是晴天！</p>-->
+				<!--</div>-->
+				<!--<div class="each_message">-->
+					<!--<img src="../../public/img/can_delete/head_portrait.jpg">-->
+					<!--<div class="top_right">-->
+						<!--<a class="commenter" href="#">留言者</a>-->
+						<!--<label>2018-04-11 12:20:39</label>-->
+					<!--</div>-->
+					<!--<p>你若安好，便是晴天！</p>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>&lt;!&ndash;留言板结束&ndash;&gt;-->
+	</div>
+
+	<!--右侧部分-->
+	<div id="middle_right" class="col-xs-12 col-sm-4">
+		<div class="personal_message">
+			<div class="personal_message_top">
+				<img src="../../public/img/people.png">
+				<p>ID:</br>12345678902</p>
+			</div>
+			<button class="follow" type="button">关注此人</button>
+			<!--自我介绍-->
+			<div class="introduction">
+				<p style="display: block;"><span>要做个坚强的人！</span></p>
+			</div>
+		</div>
+
+		<!--关注-->
+		<a class="fans" href="#"><i class="glyphicon glyphicon-menu-right"></i>他被<span class="fans_num">10</span>人关注</a>
+		<h3 class="my_follow_name">他的关注 · · · · · ·<span>(<a href="#" class="attentNum">成员10</a>)</span></h3>
+		<ul class="my_follow">
+
+		</ul>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="../../public/js/people/other_people.js" ></script>
+{% endblock %}
+

@@ -1,0 +1,40 @@
+<!--注册页面-->
+
+{% extends 'head.html' %}
+
+{%block hesderdifferent%}
+<title>文瓣注册</title>
+<link rel="stylesheet" href="../public/css/register.css" />
+{%endblock%}
+
+{%block middle%}
+<div id="main">
+	<img src="../public/img/logo.png" />
+	<form id="register_form" method="post" action="/api/user/register">
+		<fieldset>
+			<p>
+				<label for="user_phone">手机号码</label>
+				<input id="user_phone" name="user_phone" type="text" placeholder="请输入手机号" />
+			</p>
+			<p>
+				<label for="user_name">用户名</label>
+				<input id="user_name" name="user_name" type="text" placeholder="请输入用户名" />
+			</p>
+			<p>
+				<label for="password">密码</label>
+				<input type="password" id="password" name="password" placeholder="请输入6-15英文字母、数字" />
+			</p>
+			<p>
+				<label for="password2">确认密码</label>
+				<input type="password" id="password2" name="password2" placeholder="请再次输入密码" />
+			</p>
+			<p>注册即表示同意《<a href="#">用户注册条款</a>》</p>
+			<p>
+				<button class="submit_btn" type="button">注 册</button>
+			</p>
+		</fieldset>
+	</form>
+	<a href="/user/login" class="go_login">已有账号或使用其他社交账号登录</a>
+</div>
+<script type="text/javascript" src="../public/js/register.js"></script>
+{%endblock%}

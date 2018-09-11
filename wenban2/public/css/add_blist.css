@@ -1,0 +1,84 @@
+.middle{
+	width: 92%;
+	margin: 0 4%;
+}
+h3{
+	color: #228A31;
+	letter-spacing: 2px;
+}
+form{
+	margin-top: 40px;
+	margin-left: 20px;
+}
+#creat_blist label{
+	color: #000;
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin-right: 10px;
+	font-weight: normal;
+}
+#creat_blist div{
+	margin:10px 0;
+}
+#creat_blist input[type=text]{
+	width: 200px;
+	height: 25px;
+	padding: 0 5px;
+}
+#creat_blist .tabs input[type=button]{
+	padding: 5px 10px;
+	font-size: 15px;
+	margin-bottom: 10px;
+	background: #DCF6DC;
+	border:1px solid #eee;
+	height: 30px;
+	outline: none;
+	margin-right: 5px;
+	margin-left: 0;
+}
+#creat_blist .tabs input[type=button]:hover{
+	border:1px solid #ccc;
+}
+#creat_blist .tabs input.sel{
+	background: #30A080;
+	color: #fff;
+	border:1px solid #ccc;
+}
+.add_tabs {
+	text-align: center;
+}
+.add_tabs input:last-child{
+	background: #228A31;
+	color: #fff;
+	padding: 2px 10px;
+	border: none;
+	margin-left: 10px;
+	outline: none;
+}
+#creat_blist div:last-child{
+	text-align: center;
+}
+#creat_blist div:last-child button{
+	padding: 2px 10px;
+	background:#EDF4ED;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-right: 5px;
+	border:1px solid #ccc;
+	outline:none;
+}
+#creat_blist div:last-child button:first-child{
+	background:#228A31;
+	color: #fff;
+	border:1px solid #228A31;
+}
+
+.tabs label span{
+	color: #666;
+	font-size: 13px;
+}
+
+footer{
+	position: absolute;
+	bottom: 0px;
+}

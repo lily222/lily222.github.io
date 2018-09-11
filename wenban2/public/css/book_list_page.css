@@ -1,0 +1,527 @@
+.middle{
+	width: 92%;
+	margin: 0 4%;
+	/*overflow: hidden;*/ /*清除浮动*/
+}
+
+/*左边主体部分*/
+#page_main{
+	padding-top: 50px;
+	position: relative;
+}
+#page_main .book_list_cover{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-bottom: 10px;
+}
+#page_main .change_cover{
+	background: #E1FCB7;
+	font-size: 13px;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 58px;
+	left: 23px;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0 0 20px #000;
+	color: #228A31;
+	cursor: pointer;
+	display: none;
+}
+#page_main .book_list_name{
+	font-weight: bold;
+	font-size: 28px;
+	color: #000;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin: 0 auto 10px 15px;
+	position: relative;
+}
+#page_main .change_book_list_name{
+	position: absolute;
+	right: -20px;
+	top: 20px;
+	cursor: pointer;
+	font-size: 19px;
+}
+#page_main .editor_name{
+	font-size: 14px;
+	clear: both;
+	text-decoration: none;
+	color: #337ab7;
+	margin-right: 20px;
+}
+#page_main .editor_name:hover{
+	background: #23527c;
+	color: #FFF;
+	
+}
+#page_main .tab{
+	font-size: 18px;
+	margin-top: 20px;
+	position: relative;
+}
+#page_main .tab span{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 55px;
+	line-height: 25px;
+	color: #228A31;
+}
+#page_main .tab .change_tab{
+	background: #E1FCB7;
+	outline: none;
+	border: 1px solid #ccc;
+	font-size: 15px;
+	margin-left: 10px;
+}
+/*修改标签弹出框*/
+#tab_modal .modal-title{
+	color: #228A31;
+}
+#tab_modal .btn-primary{
+	background: #228A31;
+}
+#tab_modal .modal-body{
+	font-size: 18px;
+	overflow: hidden;
+}
+#tab_modal .old_tab,#tab_modal .add_tab{
+	overflow: hidden;
+}
+#tab_modal .old_tab{
+	border-bottom: 1px solid #999;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+#tab_modal .modal-body span{
+	float: left;
+	margin-bottom: 10px;
+}
+#tab_modal .modal-body ul{
+	float: left;
+	font-size: 15px;
+}
+#tab_modal .modal-body ul li{
+	float: left;
+	padding: 1px 5px;
+	margin-right: 5px;
+	border: 1px solid #ccc;
+	background: #E1FCB7;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+#tab_modal .old_tab ul{
+	padding-top: 5px;
+}
+#tab_modal .old_tab ul li{
+	position: relative;
+	margin-right: 8px;
+}
+#tab_modal .old_tab li:after{
+	content: "⊗";
+	display: block;
+	width: 14px;
+	color: #fff;
+	font-size: 18px;
+	height: 14px;
+	position: absolute;
+	top: -6px;
+	right: -7px;
+	background: red;
+	border-radius: 7px;
+	text-indent: -2px;
+	line-height: 13px;
+	cursor: pointer;
+}
+#tab_modal .modal-body .write{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+#tab_modal .new_tab{
+	border: 1px solid #ccc;
+	height: 30px;
+	width: 200px;
+	font-size: 15px;
+}
+#tab_modal input:last-child{
+	height: 30px;
+	line-height: 19px;
+}
+
+
+#page_main .content_main{
+	width: 100%;
+	clear: both;
+}
+/*书单包含的小说*/
+.content_main{
+	margin-top: 50px;
+}
+#novel_list .each_novel{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+#novel_list .each_novel img{
+	width: 20%;
+	float: left;
+}
+#novel_list .each_novel_right{
+	width: 78%;
+	float: right;
+	margin-left: 5px;
+}
+#novel_list .each_novel_right .del_each_novel{
+	float: right;
+	font-size: 18px;
+	color: #2AABD2;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+#novel_list .each_novel_right .del_each_novel:hover{
+	background: #23527c;
+	text-decoration: none;
+	color: #fff;
+}
+#novel_list .each_novel_right h3{
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+#novel_list .each_novel_right .author{
+	float: left;
+	height: 16px;
+	text-decoration: none;
+	color: #999;
+	display: block;
+	height: 16px;
+	margin-right: 10px;
+	line-height: 16px;
+}
+#novel_list .each_novel_right .author:hover{
+	color: #fff;
+	background: #23527c;
+}
+#novel_list .each_novel_right .star_black{
+	width: 70px;
+	height: 14px;
+	background: url(../img/score_star.png) 0px -140px no-repeat;
+	background-size: 70px;
+	float: left;
+}
+#novel_list .each_novel_right .star_yellow{
+	width: 80%;
+	height: 14px;
+	background: url(../img/score_star.png) 0px 0px no-repeat;
+	background-size: 70px;
+}
+#novel_list .each_novel_right .text_box{
+	clear: both;
+	padding-top: 10px;
+}
+#novel_list .each_novel_right .recommendation_title,#novel_list .each_novel_right .summary_title{
+	display: block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	font-size: 16px;
+	background: #DCF6DC;
+	line-height: 30px;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 0;
+	margin-top: 5px;
+	cursor: pointer;
+}
+#novel_list .each_novel_right .recommendation_title{
+	position: relative;
+}
+#novel_list .each_novel_right .recommendation_title .change_recommendation{
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	display: block;
+	width: 20px;
+	line-height: 20px;
+	height: 20px;
+	color: #228A3B;
+}
+#novel_list .each_novel_right .recommendation_title .change_recommendation:hover{
+	background: #228A31;
+	color: #fff;
+}
+#novel_list .each_novel_right .summary_title{
+	border-radius: 10px;
+}
+#novel_list .each_novel_right .recommendation_text,#novel_list .each_novel_right .summary_text{
+	box-shadow: 0 -1px 2px #666 inset;
+	border-radius: 0px 0px 10px 10px;
+	padding: 10px;
+	text-align: justify;
+}
+#novel_list .each_novel_right .recommendation_text input{
+	display: none;
+	margin-left: auto;
+	margin-top: 5px;
+	background: #228A3B;
+	border: 1px solid #999;
+	width: 35px;
+	color: greenyellow;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+#novel_list .each_novel_right .summary_text{
+	display: none;
+}
+/*书单包含的小说的页数,和评论页数*/
+.content_main_pagination,.comment_pagination{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.content_main_pagination ul,.comment_pagination ul{
+	margin: 0 auto;
+	overflow: hidden;
+	line-height: 20px;
+	height: 20px;
+	display: inline-block;
+	font-size: 18px;
+}
+.content_main_pagination li,.comment_pagination li{
+	float: left;
+	height: 20px;
+}
+.content_main_pagination li a,.comment_pagination li a{
+	display: block;
+	padding: 0 10px;
+	color: #228A31;
+}
+.content_main_pagination li.active a,.comment_pagination li.active a{
+	background: #228A31;
+	color: #fff;
+}
+/*对该书单的操作*/
+#operation{
+	margin-bottom: 80px;
+}
+#operation button{
+	padding: 5px 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	background: radial-gradient(#fff,#DCF6DC);
+	outline: none;
+}
+#operation button span{
+	margin-left: 5px;
+}
+#operation .share{
+	position: relative;
+}
+#operation .share_message{
+	position: absolute;
+	bottom: 40px;
+	left: -100px;
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+	padding: 5px;
+	width: 300px;
+	background: #fff;
+	display: none;
+}
+
+/*评论*/
+#book_list_comment{
+	width: 100%;
+	background: #fff;
+}
+#book_list_comment .each_comment{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+#book_list_comment .each_comment img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+}
+#book_list_comment .each_comment .reviewer_message,#book_list_comment .each_comment .to_reactive,#book_list_comment .each_comment .comment_content{
+	
+	width: 100%;
+	padding-left: 50px;
+	text-align: justify;
+	z-index: 2;
+}
+#book_list_comment .each_comment .reviewer_message{
+	margin-bottom: 10px;
+}
+#book_list_comment .each_comment .reviewer_message span{
+	margin-left: 10px;
+}
+#book_list_comment .each_comment .reviewer_message .reactive{
+	float: right;
+}
+#book_list_comment .each_comment .reviewer_message .reactive:hover{
+	background: #fff;
+	color: #23527c;
+	text-decoration: underline;
+}
+#book_list_comment .each_comment .to_reactive{
+	background: #ecfaec;
+	color: #999;
+	position: relative;
+}
+#book_list_comment .each_comment .to_reactive:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 50px;
+	background: #fff;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -3;
+}
+#book_list_comment .each_comment a{
+	text-decoration: none;
+}
+#book_list_comment .each_comment a:hover{
+	background: #23527c;
+	color: #fff;
+}
+/*点击后出现评论的编辑框*/
+#book_list_comment .edite{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 60px;
+	display: none;
+}
+#book_list_comment .edite img{
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+#book_list_comment .edite .edite_right{
+	width: 100%;
+	padding-left: 50px;
+}
+#book_list_comment .edite .edite_right textarea{
+	margin: 10px 0 5px 0px;
+	height: 60px;
+	width: 100%;
+}
+#book_list_comment .edite .edite_right button{
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	background: #DCF6DC;
+	padding: 1px 10px;
+}
+
+/*右侧栏部分*/
+#page_right{
+	padding-right: 0;
+}
+/*书单编辑者信息*/
+.editor_message{
+	width: 100%;
+	background: #e1fcb7;
+	margin-top: 50px;
+	margin-right: 0;
+	margin-left: auto;
+	padding: 10px;
+}
+.editor_message img{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.editor_message h3{
+	float: left;
+	margin: 0px 0 0 10px;
+	width: 69%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 50px;
+	line-height: 50px;
+	color: #089108;
+	overflow: hidden;
+}
+.editor_message h3:hover{
+	color: #337ab7;
+}
+.editor_message p{
+	clear: both;
+	padding: 10px 0 0 0;
+	text-align: justify;
+	color: #666;
+}
+/*相关的热门书单*/
+#page_right .hot_book_list{
+	width: 100%;
+	background: #fff;
+	margin-top: 60px;
+	text-align: center;
+}
+#page_right .hot_book_list h2{
+	font-size: 24px;
+	color: #228A31;
+}
+#page_right .hot_book_list li{
+	padding: 5px 0;
+	font-size: 13px;
+}
+#page_right .hot_book_list .name{
+	min-width: 100%;
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 18px;
+    color:#28c07e;
+}
+#page_right .hot_book_list .name:hover{
+    /*background:#3377AA;*/
+    /*color: #fff;*/
+    text-decoration: underline;
+    color: #3377AA;
+}
+#page_right .hot_book_list .editor_name:hover{
+	background: #23527c;
+	color: #fff;
+	text-decoration: none;
+}
+#page_right .hot_book_list .editor_name{
+	color: #999;
+}
+#page_right .hot_book_list span{
+	margin-left: 10px;
+}
+
+footer{
+	clear: both;
+}
+/* 超小小屏幕（手机，小于 768px） */
+@media only screen and (max-width: 767px){
+	#page_main .book_list_name{
+		font-size: 25px;
+	}
+	#page_main .change_book_list_name{
+		font-size: 17px;
+	}
+}
+
+
+

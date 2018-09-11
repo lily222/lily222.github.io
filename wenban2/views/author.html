@@ -1,0 +1,71 @@
+{% extends 'head.html' %}
+{%block hesderdifferent%}
+<title>作者-{{authorAll['author'].Authorname}}</title>
+<link rel="stylesheet" href="/public/css/author.css" />
+{%endblock%}
+
+{% block middle %}
+<div id="middle">
+	<!--主体左侧-->
+	<div id="middle_left" class="col-xs-12 col-sm-8">
+		<div class="message"> <!--基本信息-->
+			<h3>{{authorAll['author'].Authorname}}</h3>
+			<img src="{{authorAll['author'].AuthorHead}}" alt="作者头像">
+			<div>
+				<p>性别：<span class="sex">{{authorAll['author'].AuthorSex}}</span></p>
+				<p>国家/地区：<span class="area">{{authorAll['author'].AuthorArea}}</span></p>
+			</div>
+		</div>
+		<!--简介-->
+		<h3>作者简介 · · · · · ·</h3>
+		{% if authorAll['author'].AuthorAbstract %}
+		<p class="author_abstract">
+			<i>{{authorAll['author'].AuthorAbstract}}</i>
+			<span>...</span>
+			<a href="javascript:;">（显示全部）</a>
+		</p>
+		{% endif %}
+		<!--作品-->
+		<h3>作品 · · · · · ·</h3>
+		<div class="invention">
+			<ul>
+				{% for novel in authorAll['novel'] %}
+				<li>
+					<img src="{{novel.NovelCover}}" alt="{{novel.Novelname}}" />
+					<div>
+						<span class="inv_name" onclick="location.href='/novel?novelID={{novel.NovelID}}'">{{novel.Novelname}}</span>（<span class="inv_year">{{novel.NovelTime}}</span>）</br>
+						<div class="star_black"><div class="star_yellow" style="width:{{novel.gradewidth}} ;"></div></div>
+						<span class="inv_mark">{{novel.NovelGrade}}</span>
+						<span class="tab">{{novel.tab}}</span>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+			<!--页数,省略页数-->
+			<!--<div class="inv_page_out"><ul id="inv_page">&lt;!&ndash;这里显示分页&ndash;&gt;</ul></div>-->
+		</div>
+	</div>
+	<!--主体右侧-->
+	<div id="middle_right" class="col-xs-12 col-sm-4">
+		<div class="advert">
+			<img src="/public/img/advert.jpg">
+			<span>广告</span>
+		</div>
+		<div class="hot_novel">
+			<h3>热门小说</h3>
+			<ul>
+				{% for hotnovel in authorAll['hotnovel'] %}
+				<li>
+					<a href="/novel?novelID={{hotnovel.NovelID}}">{{hotnovel.Novelname}}</a><br>
+					<a href="/author?authorID={{hotnovel.NovelAuthor}}">{{hotnovel.Authorname}}</a>
+					<div class="star_black"><div class="star_yellow" style="width:{{hotnovel.gradewidth}} ;"></div></div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/public/js/jqpaginator.min.js" ></script>
+<script type="text/javascript" src="/public/js/author.js" ></script>
+{% endblock %}
+

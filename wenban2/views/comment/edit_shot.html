@@ -1,0 +1,67 @@
+{% extends '../head.html' %}
+{%block hesderdifferent%}
+<title>编辑短评</title>
+<link rel="stylesheet" href="/public/css/comment/edit_shot.css" />
+{%endblock%}
+
+{% block middle%}
+<div id="middle">
+	<!--主体左侧-->
+	<div id="middle_left" class="col-xs-12 col-sm-8">
+		<h3>编辑短评</h3>
+		<!--评分-->
+		<div class="short_evaluate">
+			<h5>评分</h5>
+			<label class="first_label"><input type="radio" value="2" name="evaluate_num" />很差</label>
+			<label><input type="radio" value="4" name="evaluate_num" />较差</label>
+			<label><input type="radio" value="6" name="evaluate_num" />还行</label>
+			<label><input type="radio" value="8" name="evaluate_num" />不错</label>
+			<label><input type="radio" value="10" name="evaluate_num" />力荐</label>
+		</div>
+		<!--选择标签-->
+		<div class="selected_tab">
+			<h5>已选标签：</h5>
+			<ul>
+			</ul>
+		</div>
+		<div class="use_tab">
+			<h5>常用标签：</h5>
+			<ul>
+				<li>穿越</li>
+				<li>同人</li>
+				<li>重生</li>
+				<li>游戏</li>
+				<li>灵异</li>
+				<li>武侠</li>
+				<li>强强</li>
+				<li>古代</li>
+				<li>网红</li>
+				<li>修真</li>
+			</ul>
+			<div>
+				<input type="text" placeholder="输入新的标签" />
+				<input class="add_new_tab" type="button" value="添加标签" />
+			</div>
+		</div>
+		<!--简评-->
+		<div class="conttent">
+			<h5>简评:</h5>
+			<span>350</span>
+			<textarea maxlength="350"></textarea>
+		</div>
+		<button type="button" class="save">保存</button>
+		<button type="button" class="cancel">取消</button>
+	</div>
+	<!--主体右侧-->
+	<div id="middle_right" class="col-xs-12 col-sm-4">
+		<!--评论的小说信息-->
+		<div class="novel">
+			<a href="/novel?novelID={{novelDate.NovelID}}"><i class="glyphicon glyphicon-menu-right"></i>{{novelDate.Novelname}}</a></br>
+			<img src="{{novelDate.NovelCover}}" alt="小说封面">
+			<p class="autor">作者：<span>{{novelDate.Authorname}}</span></p>
+			<p class="tab">标签：<span>{{novelDate.tab}}</span></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/public/js/comment/edit_shot.js" ></script>
+{%endblock%}

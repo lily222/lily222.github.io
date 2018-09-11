@@ -1,0 +1,55 @@
+{% extends 'head.html' %}
+{%block hesderdifferent%}
+<title>搜索：{{searchname}}</title>
+<link rel="stylesheet" href="/public/css/search.css" />
+{%endblock%}
+
+{% block middle%}
+<div id="middle">
+	<!--左侧部分-->
+	<div id="middle_left" class="col-xs-12 col-sm-8">
+		<!--搜索框-->
+		<form class="search_box" method="get" action="/search">
+			<input type="text" id="search_input" name="search" value="{{searchname}}" />
+			<button type="submit" class="glyphicon glyphicon-search" ></button>
+		</form>
+		<!--搜索内容导航-->
+		<ul class="search_nav">
+			<li class="active"><a href="#">小说</a></li>
+			<li><a href="#">用户</a></li>
+			<li><a href="#">作者</a></li>
+			<li><a href="#">书评</a></li>
+			<li><a href="#">书单</a></li>
+		</ul>
+		<!--搜索内容-->
+		<div class="search_content">
+			<!--标题-->
+			<h3>相关小说：</h3>
+			<div class="novel each_content"><!--小说--></div><!--小说结束-->
+
+			<div class="user each_content"><!--用户--></div><!--用户结束-->
+
+			<div class="editor each_content"><!--作者--></div><!--作者结束-->
+
+			<div class="comment each_content"><!--书评--></div><!--书评结束-->
+
+			<div class="book_list each_content"><!--书单--></div><!--书单结束-->
+
+			<button id="show_more">显示更多</button>
+		</div><!--搜索内容结束-->
+	</div>
+	<!--右侧部分-->
+	<div id="middle_right" class="col-xs-12 col-sm-4">
+		<a href="#" class="advert"><img alt="广告" src="/public/img/advert.jpg" /><i>广告</i></a>
+		<!--<div class="add_novel">-->
+			<!--<h3>文瓣没有这本小说，我来添加</h3>-->
+			<!--<a href="#"><i class="glyphicon glyphicon-chevron-right"></i>添加小说</a>-->
+		<!--</div>-->
+	</div>
+</div>
+<!--固定按钮，回到顶部-->
+<div id="to_top"><i class="glyphicon glyphicon-arrow-up"></i>回到顶部</div>
+<div id="location"></div><!--给返回顶部按钮定位-->
+
+<script type="text/javascript" src="/public/js/search.js" ></script>
+{%endblock%}

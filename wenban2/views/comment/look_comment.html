@@ -1,0 +1,85 @@
+{% extends '../head.html' %}
+{%block hesderdifferent%}
+<title>{{commentDate.lcomment.LCommentTitle}}</title>
+<link rel="stylesheet" href="/public/css/comment/look_comment.css" />
+{%endblock%}
+
+{% block middle%}
+<div id="middle">
+	<!--主体左侧-->
+	<div id="middle_left" class="col-xs-12 col-sm-8">
+		<h2>{{commentDate.lcomment.LCommentTitle}}</h2>
+		<div class="little_message">
+			<span style="display: none;" id="userID">{{commentDate.lcomment.LCommentEID}}</span>
+			<a href="/user/peoplepage?userID={{commentDate.lcomment.LCommentEID}}">{{commentDate.lcomment.Username}}</a>&nbsp;&nbsp;评论&nbsp;《<a href="/novel?novelID={{commentDate.lcomment.LCommentNID}}">{{commentDate.novel.Novelname}}</a>》
+			<div class="star_black"><div class="star_yellow" style="width: {{commentDate.lcomment.gradewidth}};"></div></div>
+			<span class="time">{{commentDate.lcomment.LCommentTime}}</span>
+		</div>
+		<!--长评内容-->
+		<div id="comment_content">
+			{{commentDate.lcomment.LCommentContent}}
+		</div>
+		<!--长评是否有用-->
+		<div class="good_bad">
+			<a><i class="glyphicon glyphicon-thumbs-up"></i>有用<span class="good_num">{{commentDate.lcomment.LCommentGood}}</span></a>
+			<a><i class="glyphicon glyphicon-thumbs-down"></i>没用<span class="bad_num">{{commentDate.lcomment.LCommentBad}}</span></a>
+		</div>
+		<!--功能-->
+		<button class="collect">收藏&nbsp;<span>{{commentDate.lcomment.collect}}</span></button>
+		<button class="shear" data-clipboard-action="copy" data-clipboard-text="" data-clipboard-target="#share_message">分享<div id="share_message" class="shear_message">已复制到剪贴板，去黏贴吧！</div></button>
+		<!--<button class="react">评论</button></br>-->
+		<button class="edit"><a href="/comment/change?commentID={{commentDate.lcomment.LCommentID}}">编辑</a></button><!--自己的页面才有的功能-->
+		<button class="delete">删除</button><!--自己的页面才有的功能-->
+
+
+	</div><!--主体左侧结束-->
+	<!--主体右侧-->
+	<div id="middle_right" class="col-xs-12 col-sm-4">
+		<!--评论的小说信息-->
+		<div class="novel">
+			<a href="/novel?novelID={{commentDate.novel.NovelID}}"><i class="glyphicon glyphicon-menu-right"></i>{{commentDate.novel.Novelname}}</a></br>
+			<img src="{{commentDate.novel.NovelCover}}">
+			<p class="autor">作者：<span>{{commentDate.novel.Authorname}}</span></p>
+			<p class="tab">标签：<span>{{commentDate.novel.tab}}</span></p>
+		</div>
+		<!--更多的书评-->
+		<div class="more_comment">
+			<h3>更多《<span>{{commentDate.novel.Novelname}}</span>》的书评 </h3>
+			<ul>
+				{% for blist in commentDate.morelcomment %}
+				<li>
+					<a href="/comment?commentID={{blist.LCommentID}}">{{blist.LCommentTitle}}</a></br>
+					<a href="/user/peoplepage?userID={{blist.LCommentEID}}">{{blist.Username}}</a>
+					<div class="star_black"><div class="star_yellow" style="width:{{blist.gradewidth}} ;"></div></div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div><!--主体右侧结束-->
+</div>
+
+<script type="text/javascript" src="/public/js/clipboard.min.js" ></script>
+<script type="text/javascript" src="/public/js/comment/look_comment.js" ></script>
+{%endblock%}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="../../img/wen_icon.png" />
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title>长评的标题</title>
+		<link rel="stylesheet" href="../../dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/head.css" />
+		<link rel="stylesheet" href="../../css/comment/look_comment.css" />
+	</head>
+	<body>
+		<header></header>
+
+		<footer>&copy; 广东海洋大学</footer>
+		<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="../../js/clipboard.min.js" ></script>
+		<script type="text/javascript" src="../../js/comment/look_comment.js" ></script>
+		<script type="text/javascript" src="../../js/head.js" ></script>
+	</body>
+</html>
